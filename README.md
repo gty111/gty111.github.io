@@ -17,4 +17,4 @@ E-mail : guoty9[at]mail2.sysu.edu.cn
 
 ## Research
 
-- [batchelor](doc/bachelor.pdf) “General Computing optimization for GPU based on Cache management”
+- [Bachelor's dissertation](doc/bachelor.pdf) “General Computing optimization for GPU based on Cache management”
