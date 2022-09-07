@@ -1,7 +1,5 @@
 # Tianyu Guo
 
-> Welcome to gtyinstinct's web
-
 E-mail : guoty9[at]mail2.sysu.edu.cn
 
 ## Education Experience
