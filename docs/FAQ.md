@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Customization
+title: FAQ
 nav_order: 100
 ---
 

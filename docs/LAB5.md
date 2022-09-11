@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Customization
+title: V.Explore GEMM and GPGPU-SIM (optional)
 nav_order: 15
 ---
 

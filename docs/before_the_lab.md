@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Customization
+title: Before the LAB
 nav_order: 2
 ---
 

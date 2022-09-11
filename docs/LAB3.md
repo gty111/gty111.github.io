@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Customization
+title: III.Hotspot Analysis
 nav_order: 13
 ---
 
