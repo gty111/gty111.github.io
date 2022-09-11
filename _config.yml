@@ -1,13 +1,3 @@
-remote_theme: olivier3lanc/Jekyll-LibDoc
+theme: jekyll-theme-minimal
 title: Gtyinstinct's homepage
 description: Welcome to gtyinstinct's homepage
-
-defaults:
-  -
-    values:
-      layout: libdoc/page
-kramdown:
-    syntax_highlighter_opts:
-        disable: true
-sass:
-    style: compressed
