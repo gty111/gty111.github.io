@@ -3,6 +3,8 @@ title: SYSU ARCH
 description: Welcome to SYSU's homepage
 
 navigation :
+  - name : Home
+    link : ./README.html
   - name : Before the LAB
     link : ./before_the_lab.html
   - name : I.Familiar with GEM5
