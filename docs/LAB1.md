@@ -4,7 +4,7 @@ title: I.Familiar with GEM5
 nav_order: 21
 ---
 
-## I. Familiar with GEM5
+## I Familiar with GEM5
 
 Freely read something about GEM5 on its [web page](https://www.gem5.org/).
 
