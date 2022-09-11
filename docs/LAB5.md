@@ -6,10 +6,12 @@ nav_order: 25
 
 ## V Explore GEMM and GPGPU-SIM `optional`
 
+{: .highlight}
 > This part of Lab is optional
 
 ### V.1 Build [GPGPU-SIM](http://www.gpgpu-sim.org/)
 
+{: .highlight}
 > `dev` TODO using docker
 
 GPGPU-SIM is a simulator for CUDA program. GPGPU-SIM is a little outdated from GEM5. But it is still acknowledged by academic field.

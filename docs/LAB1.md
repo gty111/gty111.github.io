@@ -22,6 +22,7 @@ wsl --install
 
 then [download Docker Desktop for Windows](https://docs.docker.com/desktop/install/windows-install/) and install.
 
+{: .highlight}
 > `wsl` is windows subsystem for linux. You can do most of the things you can do on Linux on WSL.
 > 
 > To integrate docker with wsl through `setting=>Resources=>WSL Integration`
@@ -36,6 +37,7 @@ First,obtain GEM5 image
 docker pull gcr.io/gem5-test/ubuntu-20.04_all-dependencies:v22-0
 ```
 
+{: .highlight}
 > Due to some reason, you may fail to pull that image, you can change `gcr.io` to `gcr.lank8s.cn`
 
 Then, launch the container
@@ -44,6 +46,7 @@ Then, launch the container
 docker run -itd -v <gem5 directiory>:/gem5 <image>
 ```
 
+{: .highlight}
 > using `docker images` to get info about `<image>`
 > 
 > using `git clone https://github.com/gem5/gem5.git` to get gem5
@@ -54,8 +57,10 @@ Then,connect to the container
 docker exec -it <container> /bin/bash
 ```
 
+{: .highlight}
 > using `docker ps` to get info about `<container>`
 
+{: .highlight}
 > `Question 1`: What is the meaning of `-itd -v ...` in `docker run -itd -v <gem5 directiory>:/gem5 <image>` ? What is the difference between `docker run` and `docker exec` ?
 
 ### I.2 Write an insteresting app(sieve)
@@ -66,6 +71,7 @@ Write a program that outputs one single integer at the end `the number of prime 
 
 You need to test your sieve program by building a `benchmark` program to validate its correctness and time complexity.
 
+{: .highlight}
 > `Hint` How to validate its time complexity ?
 
 ### I.3 Use GEM5
@@ -74,16 +80,19 @@ You need to test your sieve program by building a `benchmark` program to validat
   
   - choose an appropriate input size
   
+  > {: .highlight}
   > You should use something large enough that the application is interesting, but not too large that gem5 takes more than 10 minutes to execute a simulation.
   
   - change the CPU model from TimingSimpleCPU to MinorCPU.
   
+  > {: .highlight}
   > `Hint` : GEM5 won't compile MinorCPU by default. You need to add some modifications. GEM5 use `CPU_MODELS` as a parameter in the past. Try to execute `grep CPU_MODELS -R YOUR_GEM5_ROOT_DIR --exclude-dir=build` and see what you can find out.
   
   - Vary the CPU clock from 1GHz to 2GHz (in steps of 1GHz) with both CPU models.
   
   - Change the memory configuration from DDR3_1600_x64 to DDR3_2133_x64 (DDR3 with a faster clock)
 
+{: .highlight}
 > `Question 2`: In each output, does `system.cpu.numCycles` times `system.clk_domain.clock` equals `simTicks` ? Why ?
 
 ### I.4 Submit

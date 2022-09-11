@@ -6,6 +6,7 @@ nav_order: 22
 
 ## II Implement FSUBR
 
+{: .highlight}
 > `dev`implement more insts ?
 
 At this part, you will implement a missing x87 instruction (FSUBR).
@@ -36,6 +37,7 @@ We are providing an implementation using FSUBR.
 
 You need to test your implementation by building a `benchmark` program and run it in GEM5 to validate your implementation is right.
 
+{: .highlight}
 > `Question 3` : In x87.isa, you may notice that some code like `Inst::FSUB1(Ed)`, what is the meaning of the content in parentheses? How do you know that?
 
 ### II.2 Submit

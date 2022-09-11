@@ -14,6 +14,7 @@ then you can use
 chown -R <uid>:<gid> <gem5 directory>
 ```
 
+{: .highlight}
 > using `id` to get info about `<uid>` and `<gid>`
 
 ## 2. When using MinorCPU, it says `AttributeError: object 'BaseMinorCPU' has no attribute 'ArchMMU'`
@@ -32,4 +33,5 @@ All contents are subject to this LAB.
 
 contact `guoty9[AT]mail2.sysu.edu.cn`
 
+{: .highlight}
 > `dev` TODO issue at github

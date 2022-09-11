@@ -6,6 +6,7 @@ nav_order: 1
 
 # SYSU ARCH
 
+{: .highlight}
 > `dev`what to name exp
 > 
 > this is the dev version of SYSU ARCH

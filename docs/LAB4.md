@@ -20,6 +20,7 @@ As `II.1` said, you need to observe how `LRU` is implemented in GEM5.
 
 Run your `sieve` program in GEM5 using NMRU or LRU and see what is the difference in the output.
 
+{: .highlight}
 > `Question 5`: Can you write a program that runs faster (about 10% speedup) using NMRU/LRU instead of LRU/NMRU ?
 
 ### IV.4 Submit
