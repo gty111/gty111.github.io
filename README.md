@@ -4,10 +4,10 @@ E-mail : guoty9[at]mail2.sysu.edu.cn
 
 ## Education Experience
 
-| year| university | degree|
-| --------- | ----------------- | -------- |
-| 2018 - 2022 | Xidian University | undergraduate |
-|2022 - now| Sun Yat-Sen University| graduate |
+| year        | university             | degree        |
+| ----------- | ---------------------- | ------------- |
+| 2018 - 2022 | Xidian University      | undergraduate |
+| 2022 - now  | Sun Yat-Sen University | graduate      |
 
 ## Personal Web
 
@@ -17,4 +17,4 @@ E-mail : guoty9[at]mail2.sysu.edu.cn
 
 ## Research
 
-- [Bachelor's dissertation](doc/bachelor.pdf) “General Computing optimization for GPU based on Cache management”
+- [Bachelor's dissertation](doc/Bachelor's dissertation.pdf) “General Computing optimization for GPU based on Cache management”
