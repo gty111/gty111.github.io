@@ -1,20 +1,9 @@
-# Tianyu Guo
+# SYSU ARCH
 
-E-mail : guoty9[at]mail2.sysu.edu.cn
+> `dev`what to name exp
+> 
+> this is the dev version of SYSU ARCH
 
-## Education Experience
+reference [GEM5 101](https://www.gem5.org/documentation/learning_gem5/gem5_101/)(add **changes** to fit current version of GEM5 and new ideas)
 
-| year        | university             | degree        |
-| ----------- | ---------------------- | ------------- |
-| 2018 - 2022 | Xidian University      | undergraduate |
-| 2022 - now  | Sun Yat-Sen University | graduate      |
-
-## Personal Web
-
-- [CSDN](https://blog.csdn.net/gtyinstinct)
-- [Github](https://github.com/gty111)
-- [Leetcode](https://leetcode.cn/u/gtyinstinctx/)
-
-## Research
-
-- [Bachelor's dissertation](doc/Bachelor's dissertation.pdf) “General Computing optimization for GPU based on Cache management”
+# 
