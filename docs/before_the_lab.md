@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Before the LAB
-nav_order: 20
+nav_order: 2
 ---
 
 ## Before the LAB

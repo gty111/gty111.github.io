@@ -1,7 +1,7 @@
 ---
 layout: default
 title: I.Familiar with GEM5
-nav_order: 21
+nav_order: 3
 ---
 
 ## I Familiar with GEM5
