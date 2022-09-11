@@ -1,7 +1,7 @@
 ---
 layout: default
 title: V.Explore GEMM and GPGPU-SIM (optional)
-nav_order: 15
+nav_order: 25
 ---
 
 ## V Explore GEMM and GPGPU-SIM `optional`

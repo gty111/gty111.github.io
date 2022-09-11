@@ -1,7 +1,7 @@
 ---
 layout: default
 title: IV.Implement NMRU replacement policy
-nav_order: 14
+nav_order: 24
 ---
 
 ## IV Implement NMRU replacement policy

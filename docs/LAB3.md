@@ -1,7 +1,7 @@
 ---
 layout: default
 title: III.Hotspot Analysis
-nav_order: 13
+nav_order: 23
 ---
 
 ## III Hotspot Analysis
