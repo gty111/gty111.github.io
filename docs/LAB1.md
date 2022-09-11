@@ -1,3 +1,9 @@
+---
+layout: default
+title: Customization
+nav_order: 11
+---
+
 ## I. Familiar with GEM5
 
 Freely read something about GEM5 on its [web page](https://www.gem5.org/).

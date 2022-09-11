@@ -1,3 +1,9 @@
+---
+layout: default
+title: Customization
+nav_order: 100
+---
+
 # FAQ
 
 ## 1. When building GEM5, it says `You're missing the gem5 style or commit message hook...`

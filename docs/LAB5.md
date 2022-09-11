@@ -1,3 +1,9 @@
+---
+layout: default
+title: Customization
+nav_order: 15
+---
+
 ## V Explore GEMM and GPGPU-SIM `optional`
 
 > This part of Lab is optional

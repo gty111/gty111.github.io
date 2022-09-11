@@ -1,3 +1,9 @@
+---
+layout: default
+title: Customization
+nav_order: 2
+---
+
 ## Before the LAB
 
 **There is some points you need to mind**

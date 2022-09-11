@@ -2,22 +2,4 @@ remote_theme: just-the-docs/just-the-docs
 
 title: SYSU ARCH 
 description: Welcome to SYSU's homepage
-
-navigation :
-  - name : Home
-    link : ./home.html
-  - name : Before the LAB
-    link : ./before_the_lab.html
-  - name : I.Familiar with GEM5
-    link : ./LAB1.html
-  - name : II.Implement FSUBR
-    link : ./LAB2.html
-  - name : III.Hotspot Analysis
-    link : ./LAB3.html
-  - name : IV.Implement NMRU replacement policy
-    link : ./LAB4.html
-  - name : V.Explore GEMM and GPGPU-SIM (optional)
-    link : ./LAB5.html
-  - name : FAQ
-    link : ./FAQ.html
   

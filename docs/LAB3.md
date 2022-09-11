@@ -1,3 +1,9 @@
+---
+layout: default
+title: Customization
+nav_order: 13
+---
+
 ## III Hotspot Analysis
 
 The DAXPY loop (double precision aX + Y) is an oft used operation in programs that work with matrices and vectors. The following code implements DAXPY in C++11.
