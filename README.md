@@ -1,9 +1,3 @@
----
-layout: default
-title: Home
-nav_order: 1
----
-
 # SYSU ARCH
 
 > `dev`what to name exp
