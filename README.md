@@ -17,7 +17,7 @@ E-mail : guoty9[at]mail2.sysu.edu.cn
 
 ## Experience
 
-- Teaching Assistant of "SYSU-DCS3013 : Computer Architecture" 
+- Teaching Assistant of "SYSU-DCS3013 : Computer Architecture" [2022f]
   
   > release [SYSU-ARCH LAB](https://gty111.github.io/SYSU-ARCH)
 
