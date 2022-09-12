@@ -1,11 +1,3 @@
-remote_theme: just-the-docs/just-the-docs
-
-title: SYSU ARCH 
-description: Welcome to SYSU's homepage
-
-
-callouts_level: quiet
-callouts:
-  highlight:
-    color: green
-  
+theme: jekyll-theme-minimal
+title: Gtyinstinct's homepage
+description: Welcome to gtyinstinct's homepage
