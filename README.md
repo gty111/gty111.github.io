@@ -1,4 +1,4 @@
-# Tianyu Guo
+# Tianyu Guo (郭天宇)
 
 E-mail : guoty9[at]mail2.sysu.edu.cn
 
