@@ -8,8 +8,8 @@ E-mail : guoty9[at]mail2.sysu.edu.cn
 
 | year        | university             | degree        |
 | ----------- | ---------------------- | ------------- |
-| 2018 - 2022 | Xidian University      | undergraduate |
-| 2022 - now  | Sun Yat-Sen University | graduate      |
+| 2018 - 2022 | Xidian University      | B.S. |
+| 2022 - now  | Sun Yat-Sen University | master      |
 
 ## Personal Web
 
