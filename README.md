@@ -4,6 +4,10 @@
 
 E-mail : guoty9[at]mail2.sysu.edu.cn
 
+## [Resume](doc/resume.pdf)
+
+---
+
 ## Education Experience
 
 | year        | university             | degree |
@@ -29,5 +33,3 @@ E-mail : guoty9[at]mail2.sysu.edu.cn
 
 - [AI final HW](doc/A%20Convolutional%20Neural%20Network%20Framework%20support%20on%20CPU%20and%20GPU.pdf) "A Convolutional Neural Network Framework
   support on CPU and GPU"
-
-## [Resume](doc/resume.pdf)
