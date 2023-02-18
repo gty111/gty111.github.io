@@ -1,6 +1,6 @@
 # Tianyu Guo (郭天宇)
 
-<img title="" src="pic/gty.jpg" alt="" width="291">
+
 
 E-mail : guoty9[at]mail2.sysu.edu.cn
 
