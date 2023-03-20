@@ -116,19 +116,19 @@ navbar:
             url: https://github.com/gty111
 # Page footer configurations
 footer:
-    # Copyright text
-    copyright: © 2019
-    # Links to be shown on the right of the footer section
-    links:
-        Creative Commons:
-            icon: fab fa-creative-commons
-            url: https://creativecommons.org/
-        Attribution 4.0 International:
-            icon: fab fa-creative-commons-by
-            url: https://creativecommons.org/licenses/by/4.0/
-        Download on GitHub:
-            icon: fab fa-github
-            url: https://github.com/ppoffice/hexo-theme-icarus
+    # # Copyright text
+    # copyright: © 2019
+    # # Links to be shown on the right of the footer section
+    # links:
+    #     Creative Commons:
+    #         icon: fab fa-creative-commons
+    #         url: https://creativecommons.org/
+    #     Attribution 4.0 International:
+    #         icon: fab fa-creative-commons-by
+    #         url: https://creativecommons.org/licenses/by/4.0/
+    #     Download on GitHub:
+    #         icon: fab fa-github
+    #         url: https://github.com/ppoffice/hexo-theme-icarus
 # Article related configurations
 article:
     # Code highlight settings
@@ -276,8 +276,9 @@ widgets:
         type: links
         # Names and URLs of the sites
         links:
-            CSDN: https://blog.csdn.net/gtyinstinct
+            Github: https://github.com/gty111
             LeetCode: https://leetcode.cn/u/gtyinstinctx/
+            CSDN: https://blog.csdn.net/gtyinstinct
     # Categories widget configurations
     -
         # Where should the widget be placed, left sidebar or right sidebar
