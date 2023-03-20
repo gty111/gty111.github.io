@@ -6,7 +6,6 @@ author: TianYu GUO
 language: en
 timezone: ''
 url: 'https://gty111.github.io/'
-root: resume
 permalink: ':year/:month/:day/:title/'
 permalink_defaults: null
 pretty_urls:
