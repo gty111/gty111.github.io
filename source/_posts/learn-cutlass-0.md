@@ -13,7 +13,7 @@ CUTLASS is a header-only template library. After reading that, you will **be los
 
 ## 00_basic_gemm
 
-```
+```c++
 // Defines cutlass::gemm::device::Gemm, the generic Gemm computation template class.
 #include "cutlass/gemm/device/gemm.h"
 
@@ -37,7 +37,7 @@ cutlass::Status status = gemm_operator(args);
 
 ## 01_cutlass_utilities
 
-```
+```c++
 // CUTLASS includes needed for half-precision GEMM kernel
 #include "cutlass/cutlass.h"
 #include "cutlass/core_io.h"
@@ -137,7 +137,7 @@ cutlass::reference::host::TensorEquals(
 
 ## 04_tile_iterator
 
-```
+```c++
 // CUTLASS includes
 #include "cutlass/transform/threadblock/predicated_tile_iterator.h"
 #include "cutlass/layout/pitch_linear.h"
