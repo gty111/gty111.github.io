@@ -6,7 +6,7 @@ title: Tianyu Guo (郭天宇)
 
 E-mail : guoty9[at]mail2.sysu.edu.cn
 
-## [Resume](doc/resume.pdf)
+## [My Resume](doc/resume.pdf)
 
 ---
 
@@ -16,12 +16,6 @@ E-mail : guoty9[at]mail2.sysu.edu.cn
 | ----------- | ---------------------- | ------ |
 | 2018 - 2022 | Xidian University      | B.S.   |
 | 2022 - now  | Sun Yat-Sen University | Master |
-
-## Personal Web
-
-- [CSDN](https://blog.csdn.net/gtyinstinct)
-- [Github](https://github.com/gty111)
-- [Leetcode](https://leetcode.cn/u/gtyinstinctx/)
 
 ## Experience
 

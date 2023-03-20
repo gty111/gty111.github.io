@@ -106,11 +106,10 @@ navbar:
     # Navigation menu items
     menu:
         Home: /
-        Resume: /home
+        My Info: /info
         Archives: /archives
         Categories: /categories
         Tags: /tags
-        About: /about
     # Links to be shown on the right of the navigation bar
     links:
         GitHub:
