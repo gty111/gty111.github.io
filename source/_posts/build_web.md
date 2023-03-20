@@ -7,11 +7,17 @@ tags:
 - Icarus
 ---
 
+This web is building by Hexo and Icarus.
+
+<!-- more -->
+
 ## Install Node.js
 
 - for linux [reference this](https://github.com/nodesource/distributions)
 - for windows through [nvs](https://github.com/jasongin/nvs/) or [nvm](https://github.com/nvm-sh/nvm)
 - for mac through [Homebrew](https://brew.sh/) or [MacPorts](http://www.macports.org/)
+
+
 
 ## Install Hexo (require Node.js)
 
