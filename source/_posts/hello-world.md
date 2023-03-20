@@ -1,42 +1,38 @@
 ---
-title: Hello World
+title: How to build this web
 categories:
-- test-category
+- blog
 tags:
-- test-tag
+- Hexo
+- Icarus
 ---
-Welcome to [Hexo](https://hexo.io/)! This is your very first post. Check [documentation](https://hexo.io/docs/) for more info. If you get any problems when using Hexo, you can find the answer in [troubleshooting](https://hexo.io/docs/troubleshooting.html) or you can ask me on [GitHub](https://github.com/hexojs/hexo/issues).
 
-## Quick Start
+## Install Node.js
 
-### Create a new post
+- for linux [reference this](https://github.com/nodesource/distributions)
+- for windows through [nvs](https://github.com/jasongin/nvs/) or [nvm](https://github.com/nvm-sh/nvm)
+- for mac through [Homebrew](https://brew.sh/) or [MacPorts](http://www.macports.org/)
 
-``` bash
-$ hexo new "My New Post"
+## Install Hexo (require Node.js)
+
+```bash
+npm install -g hexo-cli
 ```
 
-More info: [Writing](https://hexo.io/docs/writing.html)
-
-### Run server
-
-``` bash
-$ hexo server
+## Create your site
+```bash
+hexo init <folder> 
+cd <folder>
+npm install
+npm install -S hexo-theme-icarus hexo-renderer-inferno # install icarus
+hexo config theme icarus # use theme icarus
+hexo server # start server at localhost
 ```
 
-More info: [Server](https://hexo.io/docs/server.html)
+## Reference
 
-### Generate static files
+- [hexo-tutorial](https://hexo.io/zh-cn/docs/)
+- [getting-started-with-icarus](https://ppoffice.github.io/hexo-theme-icarus/uncategorized/getting-started-with-icarus/)
 
-``` bash
-$ hexo generate
-```
 
-More info: [Generating](https://hexo.io/docs/generating.html)
 
-### Deploy to remote sites
-
-``` bash
-$ hexo deploy
-```
-
-More info: [Deployment](https://hexo.io/docs/one-command-deployment.html)
