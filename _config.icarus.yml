@@ -106,7 +106,6 @@ navbar:
     # Navigation menu items
     menu:
         Home: /
-        Blog: /blogs
         Archives: /archives
         Categories: /categories
         Tags: /tags
