@@ -35,6 +35,11 @@ hexo config theme icarus # use theme icarus
 hexo server # start server at localhost
 ```
 
+## Tips about Hexo or Icarus
+
+- Add `read more` to your blogs : just add `<!-- more -->` in your md at proper position.
+
+
 ## Reference
 
 - [hexo-tutorial](https://hexo.io/zh-cn/docs/)
