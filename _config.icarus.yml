@@ -106,7 +106,6 @@ navbar:
     # Navigation menu items
     menu:
         Home: /
-        My Info: /info
         Archives: /archives
         Categories: /categories
         Tags: /tags
