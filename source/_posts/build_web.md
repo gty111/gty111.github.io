@@ -1,7 +1,7 @@
 ---
 title: How to build this web
 categories:
-- blog
+- Technology
 tags:
 - Hexo
 - Icarus
