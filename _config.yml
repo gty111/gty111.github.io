@@ -5,7 +5,8 @@ keywords: null
 author: TianYu GUO
 language: en
 timezone: ''
-url: 'http://example.com'
+url: 'https://gty111.github.io/'
+root: resume
 permalink: ':year/:month/:day/:title/'
 permalink_defaults: null
 pretty_urls:
