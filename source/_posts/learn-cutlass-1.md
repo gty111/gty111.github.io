@@ -12,6 +12,15 @@ In cutlass 3.0, it introduces a new library, Cute, to describe and manipulate te
 
 <!-- more -->
 
+## Different types of GEMM
+
+| TYPE of GEMM | BITS of DATA | TYPE of DATA |
+| - | -| - |
+| HGEMM | 16 | floating-point number |
+| SGEMM | 32 | floating-point number |
+| DGEMM | 64 | floating-point number |
+| IGEMM | 8 or 16 or 32 or 64 | integer |
+
 ## RowMajorInterleaved (ColumnMajorInterleaved)
 
 ```c++
