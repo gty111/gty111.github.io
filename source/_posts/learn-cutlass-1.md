@@ -5,9 +5,12 @@ categories:
 - Technology
 tags:
 - cutlass
+toc: true
 ---
 
 In cutlass 3.0, it introduces a new library, Cute, to describe and manipulate tensors of threads and data. I think the core of cutlass is GEMM(or other computations) and data movement.
+
+<!-- more -->
 
 ## RowMajorInterleaved (ColumnMajorInterleaved)
 
@@ -17,8 +20,6 @@ template<int Interleave> struct cutlass::layout::RowMajorInterleaved<Interleave>
 ```
 
 RowMajorInterleaved is a layout which confused me. I didn't know the meaning of Interleaved.So I create an example to figure it out.
-
-<!-- more -->
 
 ```c++
 

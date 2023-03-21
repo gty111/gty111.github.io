@@ -106,6 +106,7 @@ navbar:
     # Navigation menu items
     menu:
         Home: /
+        About Me: /info
         Archives: /archives
         Categories: /categories
         Tags: /tags
@@ -279,11 +280,6 @@ widgets:
             Github: https://github.com/gty111
             LeetCode: https://leetcode.cn/u/gtyinstinctx/
             CSDN: https://blog.csdn.net/gtyinstinct
-    # Categories widget configurations
-    -
-        # Where should the widget be placed, left sidebar or right sidebar
-        position: left
-        type: categories
     # Recent posts widget configurations
     -
         # Where should the widget be placed, left sidebar or right sidebar
@@ -294,6 +290,11 @@ widgets:
         # Where should the widget be placed, left sidebar or right sidebar
         position: right
         type: archives
+    # Categories widget configurations
+    -
+        # Where should the widget be placed, left sidebar or right sidebar
+        position: right
+        type: categories
     # Tags widget configurations
     -
         # Where should the widget be placed, left sidebar or right sidebar

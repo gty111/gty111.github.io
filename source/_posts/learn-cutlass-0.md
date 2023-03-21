@@ -5,6 +5,7 @@ categories:
 - Technology
 tags:
 - cutlass
+toc: true
 ---
 
 > learn cutlass is a series of tutorials to learn cutlass by reading its examples or source code

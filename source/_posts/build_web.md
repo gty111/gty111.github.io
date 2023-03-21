@@ -5,6 +5,7 @@ categories:
 tags:
 - Hexo
 - Icarus
+toc: true
 ---
 
 This web is building by Hexo and Icarus.
