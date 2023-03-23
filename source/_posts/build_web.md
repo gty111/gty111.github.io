@@ -40,6 +40,7 @@ hexo server # start server at localhost
 ## Tips about Hexo or Icarus
 
 - Add `read more` to your blogs : just add `<!-- more -->` in your md at proper position.
+- To search icons to use, visit [here](https://fontawesome.com/)
 
 
 ## Reference

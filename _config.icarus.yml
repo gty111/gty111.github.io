@@ -164,10 +164,10 @@ search:
     index_pages: true
 # Comment plugin configurations
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Comment/
-# comment:
-#     type: disqus
-#     # Disqus shortname
-#     shortname: ''
+comment:
+    type: disqus
+    # Disqus shortname
+    shortname: gty111
 # Donate plugin configurations
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Donation/
 # donates:
@@ -247,6 +247,9 @@ widgets:
             Github:
                 icon: fab fa-github
                 url: https://github.com/gty111
+            Email:
+                icon: fa-solid fa-envelope
+                url: mailto:guoty9@mail2.sysu.edu.cn
             # Facebook:
             #     icon: fab fa-facebook
             #     url: https://facebook.com
