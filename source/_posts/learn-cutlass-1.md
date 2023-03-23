@@ -158,3 +158,88 @@ using: using can be used to create both type aliases and template aliases. This 
 Batched gemm can be illustrated as follows
 ![](/img/batched_gemm.jpg)
 
+In the example, it simply calls two APIs which is `cutlass::gemm::device::GemmArray` and `cutlass::gemm::device::GemmBatched`. So I think it is time to read the source of cutlass.
+
+### GemmArray
+
+Let's take GemmArray as an example. 
+
+```c++
+// GemmArray is defined in following file
+#include "cutlass/gemm/device/gemm_array.h"
+
+// simplified defination of GemmArray
+temlate<
+    typename ElementA_,
+    typename LayoutA_,
+    typename ElementB_,
+    typename LayoutB_,
+    typename ElementC_,
+    typename LayoutC_
+    //...
+>
+class GemmArray{
+  public:
+    // ignore some detailed attribute and functions
+    using GemmKernel = kernel::GemmArray<typename DefaultGemmKernel::Mma, typename DefaultGemmKernel::Epilogue, ThreadblockSwizzle>;
+
+    Status run(cudaStream_t stream = nullptr) {
+        // ignore some detailed codes
+        cutlass::Kernel<GemmKernel><<<grid, block, smem_size, stream>>>(params_);
+    }
+
+    // overload operator () for calling gemm_op(...)
+    Status operator()(cudaStream_t stream = nullptr) {
+        return run(stream);
+    }
+
+};
+```
+See, it is not very complicated. The class `GemmArray` is just built with many templates(the context of a class) and overloads operator `()` to call `cutlass::Kernel`. Then the question is coming. What is `cutlass:Kernal`?
+
+```c++
+#include "cutlass/device_kernel.h"
+
+/// Generic CUTLASS kernel template.
+template <typename Operator>
+__global__
+void Kernel(typename Operator::Params params) {
+  // Dynamic shared memory base pointer
+  extern __shared__ int SharedStorageBase[];
+
+  // Declare pointer to dynamic shared memory.
+  typename Operator::SharedStorage *shared_storage =
+      reinterpret_cast<typename Operator::SharedStorage *>(SharedStorageBase);
+
+  Operator op;
+
+  op(params, *shared_storage);
+};
+```
+
+It is just a kernel template. So the important is `Opearator` of `cutlass::Kernal` which stands for `cutlass::gemm::kernel::GemmArray`.
+
+```c++
+#include "cutlass/gemm/kernel/gemm_array.h"
+
+template <
+  typename Mma_,                  ///! Threadblock-scoped matrix multiply-accumulate 
+  typename Epilogue_,             ///! Epilogue
+  typename ThreadblockSwizzle_    ///! Threadblock swizzling function
+>
+struct GemmArray{
+    // ignore some detailed attribute and functions
+    CUTLASS_DEVICE
+    void operator()(Params const &params, SharedStorage &shared_storage) {
+        // codes run on device
+    }
+};
+
+```
+
+So `operator()` is the core of class/struct in cutlass. And all the others are the context of that class/struct.
+
+
+
+
+
