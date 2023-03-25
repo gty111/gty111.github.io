@@ -155,10 +155,9 @@ using: using can be used to create both type aliases and template aliases. This 
 
 ## 05_batched_gemm
 
-Batched gemm can be illustrated as follows
-
-<!-- ![](/img/batched_gemm.jpg) -->
-<img src="/img/batched_gemm.jpg"  width="60%">
+This example demonstrates how to use cutlass to compute a batched strided gemm in two different ways:
+- By specifying pointers to the first matrices of the batch and the stride between the consecutive matrices of the batch (this is called a strided batched gemm).
+- By copying pointers to all matrices of the batch to the device memory (this is called an array gemm).
 
 In the example, it simply calls two APIs which is `cutlass::gemm::device::GemmArray` and `cutlass::gemm::device::GemmBatched`. So I think it is time to read the source of cutlass.
 
