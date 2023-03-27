@@ -18,6 +18,7 @@ The annotation in cutlass:
 
 When the template variables are passed to instantiate CUTLASS GEMM kernel, it internally deduce the amount of threads needed per thread-block, amount of shared memory, storing data in bank-conflict free manner, and ton of other variables required to compose, initialize and launch a high performance GEMM kernel. This is the beauty of CUTLASS, it relieves developer from understanding and coding complicated hardware optimizations which can easily go wrong.
 
+CUTLASS divides a kernel into hierarchical composable sections. Which means, at each thread, warp and thread-block level, they compute on their own tile-size with higher level of tile sizes being composed from lower level ones. Multiple thread-tiles (tile size each thread computes) can be used to form warp-tiles (tile size each warp computes) and multiple warp tiles can be used to compute threadblock-tile (tile size computed by a threadblock).
 
 ## InstructionShape
 I think it is only used in tensor core operations for specifying the basic GEMM (M,N,K) such as 
@@ -45,5 +46,21 @@ The "epilogue" in Cutlass refers to the portion of the kernel that executes afte
 #include "cutlass/gemm/device/gemm_splitk_parallel.h"
 ```
 
-In cutlass, templates are arguments/context of a function. Not all the combinations of templates work. So you need to know which combination is correct. To know its more, try to build a splitK using arch sm80 instead of sm70.
+In cutlass, templates are arguments/context of a function. Not all the combinations of templates work. So you need to know which combination is correct. To know its more, try to build a splitK using arch sm80 instead of sm70. One possible solution is as follows:
+```
+142c142
+< using SmArch = cutlass::arch::Sm70;
+---
+> using SmArch = cutlass::arch::Sm80;
+150c150
+< using ShapeMMAOp = cutlass::gemm::GemmShape<8, 8, 4>;  // <- MMA Op tile M = 8, N = 8, K = 4
+---
+> using ShapeMMAOp = cutlass::gemm::GemmShape<16, 8, 16>;  // <- MMA Op tile M = 16, N = 8, K = 16
+188,189c188,189
+<   if (props.major != 7) {
+<     std::cerr << "Volta Tensor Ops must be run on a machine with compute capability of 70, 72, or 75."
+---
+>   if (props.major != 8 && props.minor != 0) {
+>     std::cerr << "Amphere Tensor Ops must be run on a machine with compute capability of 80."
+```
 
