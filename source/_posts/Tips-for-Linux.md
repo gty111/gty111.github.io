@@ -13,4 +13,4 @@ tags:
 <!-- more -->
 
 - How to change default shell : chsh
-
+- kown_hosts log the public key of the host you have visited
