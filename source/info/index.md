@@ -28,3 +28,5 @@ E-mail : guoty9[at]mail2.sysu.edu.cn
 - [Bachelor's dissertation](doc/Bachelor's%20dissertation.pdf) “General Computing optimization for GPU based on Cache management”
 
 - [AI final Homework](doc/A%20Convolutional%20Neural%20Network%20Framework%20support%20on%20CPU%20and%20GPU.pdf) "A Convolutional Neural Network Framework support on CPU and GPU"
+
+- [Weekly Paper Sharing HPCA23](doc/paper-sharing-hpca23.pdf) 
