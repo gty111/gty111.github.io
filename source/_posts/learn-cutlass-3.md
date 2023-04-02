@@ -16,7 +16,9 @@ Warp-level GEMMs may be implemented either by TensorCores issuing [mma.sync](htt
 
 The following is a simple example that using mma.sync.
 
+
 > The layout of A,B,C and D for mma.m8n8k4 is shown in [PTX ISA](https://docs.nvidia.cn/cuda/parallel-thread-execution/index.html#matrix-fragments-for-mma-m8n8k4-with-f64-floating-point-type).
+The mannual of inline PTX assembly is shown in [here](https://docs.nvidia.com/cuda/inline-ptx-assembly/index.html) 
 
 ```c++
 /**
