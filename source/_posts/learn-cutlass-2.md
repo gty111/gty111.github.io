@@ -33,6 +33,28 @@ using InstructionShape = cutlass::gemm::GemmShape<1, 1, 1>;
 using InstructionShape = cutlass::gemm::GemmShape<1, 1, 4>;
 ```
 
+## dp4a
+
+```
+dp4a.atype.btype d, a, b, c;
+.atype = .btype = { .u32, .s32 };
+```
+
+Four-way byte dot product which is accumulated in 32-bit result.
+Operand a and b are 32-bit inputs which hold 4 byte inputs in packed form for dot product.
+Operand c has type .u32 if both .atype and .btype are .u32 else operand c has type .s32.
+
+```
+d = c;
+∕∕ Extract 4 bytes from a 32bit input and sign or zero extend
+∕∕ based on input type.
+Va = extractAndSignOrZeroExt_4(a, .atype);
+Vb = extractAndSignOrZeroExt_4(b, .btype);
+for (i = 0; i < 4; ++i) {
+d += Va[i] * Vb[i];
+}
+```
+
 ## [Epilogue](https://github.com/NVIDIA/cutlass/blob/master/media/docs/efficient_gemm.md#epilogue)
 
 The above code focuses only on the matrix multiply computation C = AB whose result is held in the registers of each thread within the threadblock. The mapping of logical elements in the output tile to each thread is chosen to maximize performance of the matrix multiply computation but does not result in efficient, coalesced loads and stores to global memory.
