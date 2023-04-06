@@ -145,3 +145,10 @@ int main(){
 }
 ```
 
+## mma.sync in CUTLASS
+
+Different shape/layout/arch mma.sync used in cutlass is listed at "cutlass/arch/mma*.h". You can reference that to customize your GEMM.
+
+## wmma API in CUTLASS
+
+Different shape/layout/arch wmma API used in cutlass is listed at "cutlass/arch/wmma*.h".
