@@ -12,6 +12,8 @@ Warp-level GEMMs may be implemented either by TensorCores issuing [mma.sync](htt
 
 <!-- more -->
 
+[WMMA is introduced first in Volta](https://developer.nvidia.com/blog/programming-tensor-cores-cuda-9/)(CUDA exposes these operations as warp-level matrix operations in the CUDA C++ WMMA API).
+
 ## Using TensorCores by mma.sync
 
 The following is a simple example that using mma.sync.
