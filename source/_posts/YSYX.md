@@ -9,11 +9,6 @@ tags:
 ---
 
 [一生一芯](https://ysyx.oscc.cc/)是一个开放社区性质的公益教学项目，主要是为了解决中国芯片设计人才缺失的问题，主办方是国科大和计算所，要求学生设计出一块自己的CPU并成功流片。
-<!-- more -->
-
-以下是我的一生一芯项目的记录
-- [github](https://github.com/gty111/YSYX)
-- [腾讯文档](https://docs.qq.com/sheet/DY0xnWmdGd0pDaUNV?tab=BB08J2)
 
 ## 初识一生一芯
 
