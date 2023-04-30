@@ -17,3 +17,4 @@ tags:
 - [How to use ssh](https://zhuanlan.zhihu.com/p/21999778)
 - [/etc/passwd](https://www.geeksforgeeks.org/understanding-the-etc-passwd-file/)
 - [ls](https://www.runoob.com/linux/linux-comm-ls.html)
+- compress : tar -czvf *.tar.gz path-to-file(dir) uncompress : tar -xzvf *.tar.gz  
