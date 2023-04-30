@@ -25,6 +25,7 @@ NVIDIA's CUDA Compiler (NVCC) is based on the widely used LLVM open source compi
     - NVVM IR is a compiler IR (intermediate representation) based on the LLVM IR. The NVVM IR is designed to represent GPU compute kernels (for example, CUDA kernels). High-level language front-ends, like the CUDA C compiler front-end, can generate NVVM IR.
 - [NVVM IR samples](https://github.com/nvidia-compiler-sdk/nvvmir-samples)
 - [LLVM NVPTX backend](https://llvm.org/docs/NVPTXUsage.html)
+- [CUDA Compilation Trajectory](https://docs.nvidia.cn/cuda/cuda-compiler-driver-nvcc/index.html#the-cuda-compilation-trajectory)
 - [libNVVM API](https://docs.nvidia.com/cuda/libnvvm-api/index.html) 
 - [libdevice User's Guide](https://docs.nvidia.com/cuda/libdevice-users-guide/index.html)
     - The libdevice library is an LLVM bitcode library that implements common functions for GPU kernels.
