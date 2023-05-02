@@ -19,3 +19,4 @@ tags:
 - [ls](https://www.runoob.com/linux/linux-comm-ls.html)
 - compress : tar -cf *.tar path-to-file(dir) uncompress : tar -xf *.tar  
 - make -n : only print inst not execute 
+- view system INFO : cat /proc/version
