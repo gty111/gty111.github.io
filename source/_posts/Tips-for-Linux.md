@@ -20,3 +20,4 @@ tags:
 - compress : tar -cf *.tar path-to-file(dir) uncompress : tar -xf *.tar  
 - make -n : only print inst not execute 
 - view system INFO : cat /proc/version
+- [-nostdlib](https://gcc.gnu.org/onlinedocs/gcc/Link-Options.html#index-nostdlib)
