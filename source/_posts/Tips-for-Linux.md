@@ -21,3 +21,7 @@ tags:
 - make -n : only print inst not execute 
 - view system INFO : cat /proc/version
 - [-nostdlib](https://gcc.gnu.org/onlinedocs/gcc/Link-Options.html#index-nostdlib)
+- compilation flags
+    - -E : Only run the preprocessor
+    - -S : Only run preprocess and compilation steps (=> .s .ll)
+    - -c : Only run preprocess, compile, and assemble steps (=> .o)
