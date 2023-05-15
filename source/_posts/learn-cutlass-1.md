@@ -21,7 +21,8 @@ In cutlass 3.0, it introduces a new library, Cute, to describe and manipulate te
 | DGEMM | 64 | floating-point number |
 | IGEMM | 8 or 16 or 32 or 64 | integer |
 
-## RowMajorInterleaved (ColumnMajorInterleaved)
+## RowMajorInterleaved 
+> ColumnMajorInterleaved
 
 ```c++
 #include "cutlass/layout/matrix.h"

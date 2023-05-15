@@ -12,7 +12,8 @@ Cutlass use abstract `layout` to express the mapping rules from logic index to p
 
 <!-- more -->
 
-## Affine2 (18_amphere_fp64_tensorop_affine2_gemm)
+## Affine2 
+> 18_amphere_fp64_tensorop_affine2_gemm
 
 Affine2 is a speical layout in cutlass.
 
@@ -86,3 +87,8 @@ And the output should be
 
 So affine2 is a layout that builds a submatrix through extracting original matrix based on the given stride.
 
+## Quaternion
+> 21_quaternion_gemm
+
+Quaternion is an interesting concept mostly used in computer graphics. In my opinion, it can be seen as analogy to complex number.
+[The detailed information about quaternion can be found here.](https://github.com/Krasjet/quaternion/blob/master/quaternion.pdf)
