@@ -25,7 +25,7 @@ E-mail : guoty9[at]mail2.sysu.edu.cn
 
 ## Projects
 
-- Optimize GEMM step by step
+- [Optimize GEMM step by step](https://gty111.github.io/2023/06/20/gemm-optimize/)
 
 - [PTX-EMU: A simple emulator for CUDA program](https://github.com/gty111/PTX-EMU)
 
@@ -41,7 +41,7 @@ E-mail : guoty9[at]mail2.sysu.edu.cn
 
 ## Research
 
-- [Weekly Paper Sharing HPCA23](doc/paper-sharing-hpca23.pdf) 
+- [Weekly Paper Sharing HPCA23](doc/paper-sharing-hpca23.pdf) "DIMM-Link: Enabling Efficient Inter-DIMM Communication for Near-Memory Processing"
 
 - [AI final Homework](doc/A%20Convolutional%20Neural%20Network%20Framework%20support%20on%20CPU%20and%20GPU.pdf) "A Convolutional Neural Network Framework support on CPU and GPU"
 
