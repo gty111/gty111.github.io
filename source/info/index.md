@@ -25,6 +25,8 @@ E-mail : guoty9[at]mail2.sysu.edu.cn
 
 ## Projects
 
+- Optimize GEMM step by step
+
 - [PTX-EMU: A simple emulator for CUDA program](https://github.com/gty111/PTX-EMU)
 
 - [A simple CNN training framework support on CPU and GPU(CUDNN)](https://github.com/gty111/ConvNN)
@@ -39,8 +41,10 @@ E-mail : guoty9[at]mail2.sysu.edu.cn
 
 ## Research
 
-- [Bachelor's dissertation](doc/Bachelor's%20dissertation.pdf) “General Computing optimization for GPU based on Cache management”
+- [Weekly Paper Sharing HPCA23](doc/paper-sharing-hpca23.pdf) 
 
 - [AI final Homework](doc/A%20Convolutional%20Neural%20Network%20Framework%20support%20on%20CPU%20and%20GPU.pdf) "A Convolutional Neural Network Framework support on CPU and GPU"
 
-- [Weekly Paper Sharing HPCA23](doc/paper-sharing-hpca23.pdf) 
+- [Bachelor's dissertation](doc/Bachelor's%20dissertation.pdf) “General Computing optimization for GPU based on Cache management”
+
+
