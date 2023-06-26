@@ -283,3 +283,26 @@ A100 80GB
 [            MMA_tune] Runtime: 4.883047(ms) Gflops: 35182.685107
 [       MMA_tune==ref] PASS
 ```
+
+## [优化数据预取(prefetchx)](https://github.com/gty111/GEMM_MMA/tree/prefetchx)
+
+prefetchx 分支和之前的prefetch分支类似，区别是增加了预取数据大小并利用了同步指令`cp.async.waitgroup N`
+
+优化后性能：46.89%
+
+数据预取在之前介绍过，本次优化主要将预取数据的大小增加了1倍，并且显式地调用同步指令`cp.async.waitgroup N`来确保数据已经拷贝完成，主要流程如下图片
+
+![](img/prefetch.png)
+
+### 结果
+
+> PS: 这次测试结果使用的是A100 80GB版本
+
+```
+[        problem size] (8192,8192,8192)
+[          cutlassMMA] Runtime: 12.857344(ms) Gflops: 85516.235366
+[            MMA_base] Runtime: 30.978357(ms) Gflops: 35492.896431
+[       MMA_base==ref] PASS
+[            MMA_tune] Runtime: 27.419851(ms) Gflops: 40099.109788
+[       MMA_tune==ref] PASS
+```
