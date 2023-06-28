@@ -332,7 +332,7 @@ PS: 实测如果在kernel中申请长度为128的数组，编译器会将其分�
 [       MMA_tune==ref] PASS
 ```
 
-## [9. 调整线程块分配到的计算位置(swizzle)](https://github.com/gty111/GEMM_MMA/tree/swizzle)
+## [调整线程块分配到的计算位置(swizzle)](https://github.com/gty111/GEMM_MMA/tree/swizzle)
 
 swizzle 分支调整每个thread block分配到的计算位置来优化性能
 
