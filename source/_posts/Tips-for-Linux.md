@@ -20,6 +20,7 @@ tags:
 - compress : tar -cf *.tar path-to-file(dir) uncompress : tar -xf *.tar  
 - make -n : only print inst not execute 
 - view system INFO : cat /proc/version
+- view cpu INFO : cat /proc/cpuinfo
 - [-nostdlib](https://gcc.gnu.org/onlinedocs/gcc/Link-Options.html#index-nostdlib)
 - compilation flags
     - -E : Only run the preprocessor
