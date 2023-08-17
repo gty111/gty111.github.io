@@ -12,15 +12,15 @@ tags:
 
 <!-- more -->
 
-- How to change default shell : chsh
-- kown_hosts log the public key of the host you have visited
+- How to change default shell : `chsh`
+- kown_hosts : log the public key of the host you have visited
 - [How to use ssh](https://zhuanlan.zhihu.com/p/21999778)
 - [/etc/passwd](https://www.geeksforgeeks.org/understanding-the-etc-passwd-file/)
 - [ls](https://www.runoob.com/linux/linux-comm-ls.html)
-- compress : tar -cf *.tar path-to-file(dir) uncompress : tar -xf *.tar  
+- compress : `tar -cf *.tar path-to-file(dir)` uncompress : `tar -xf *.tar`
 - make -n : only print inst not execute 
-- view system INFO : cat /proc/version
-- view cpu INFO : cat /proc/cpuinfo
+- view system INFO : `cat /proc/version` (kernel) or `cat /etc/issue` (system)
+- view cpu INFO : `cat /proc/cpuinfo`
 - [-nostdlib](https://gcc.gnu.org/onlinedocs/gcc/Link-Options.html#index-nostdlib)
 - compilation flags
     - -E : Only run the preprocessor

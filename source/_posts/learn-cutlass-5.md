@@ -3,7 +3,7 @@ title: learn-cutlass-5
 toc: true
 date: 2023-05-14 11:48:32
 categories:
-- technology
+- Technology
 tags:
 - cutlass
 ---
