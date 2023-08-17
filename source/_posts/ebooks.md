@@ -13,7 +13,7 @@ Some links about ebooks and tutorials.
 
 <!-- more -->
 
-### [ROCM](https://rocm.docs.amd.com/)
+### [ROCM](https://rocm.docs.amd.com/) 
 
 ### [CUDA](https://docs.nvidia.com/cuda/)
 
