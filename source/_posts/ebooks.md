@@ -13,6 +13,8 @@ Some links about ebooks and tutorials.
 
 <!-- more -->
 
+### [RAPIDS(GPU Accelerated Data Science)](https://rapids.ai)
+
 ### [ROCM](https://rocm.docs.amd.com/) 
 
 ### [CUDA](https://docs.nvidia.com/cuda/)
