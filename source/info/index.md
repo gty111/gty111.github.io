@@ -41,6 +41,8 @@ E-mail : guoty9[at]mail2.sysu.edu.cn
 
 ## Research
 
+- [Work report 22-23](doc/work%20report%201.pdf) 
+
 - [Weekly Paper Sharing HPCA23](doc/paper-sharing-hpca23.pdf) "DIMM-Link: Enabling Efficient Inter-DIMM Communication for Near-Memory Processing"
 
 - [AI final Homework](doc/A%20Convolutional%20Neural%20Network%20Framework%20support%20on%20CPU%20and%20GPU.pdf) "A Convolutional Neural Network Framework support on CPU and GPU"
