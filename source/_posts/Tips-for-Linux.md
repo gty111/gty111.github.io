@@ -1,5 +1,5 @@
 ---
-title: Tips for Linux
+title: Tips for Linux and Programming
 toc: true
 date: 2023-03-30 19:05:56
 categories:
@@ -26,3 +26,4 @@ tags:
     - -E : Only run the preprocessor
     - -S : Only run preprocess and compilation steps (=> .s .ll)
     - -c : Only run preprocess, compile, and assemble steps (=> .o)
+- [C alternative tokens](https://en.wikipedia.org/wiki/C_alternative_tokens) : use `and` to replace `&&` etc.
