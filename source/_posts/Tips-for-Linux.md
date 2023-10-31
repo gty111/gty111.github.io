@@ -11,19 +11,28 @@ tags:
 > This passage is to log some tips about Linux.
 
 <!-- more -->
-
-- How to change default shell : `chsh`
-- kown_hosts : log the public key of the host you have visited
-- [How to use ssh](https://zhuanlan.zhihu.com/p/21999778)
-- [/etc/passwd](https://www.geeksforgeeks.org/understanding-the-etc-passwd-file/)
-- [ls](https://www.runoob.com/linux/linux-comm-ls.html)
-- compress : `tar -cf *.tar path-to-file(dir)` uncompress : `tar -xf *.tar`
-- make -n : only print inst not execute 
-- view system INFO : `cat /proc/version` (kernel) or `cat /etc/issue` (system)
-- view cpu INFO : `cat /proc/cpuinfo`
-- [-nostdlib](https://gcc.gnu.org/onlinedocs/gcc/Link-Options.html#index-nostdlib)
+- [Comparison between source and assembly instruction](https://godbolt.org/)
+- [C alternative tokens](https://en.wikipedia.org/wiki/C_alternative_tokens) : use `and` to replace `&&` etc.
 - compilation flags
     - -E : Only run the preprocessor
     - -S : Only run preprocess and compilation steps (=> .s .ll)
     - -c : Only run preprocess, compile, and assemble steps (=> .o)
-- [C alternative tokens](https://en.wikipedia.org/wiki/C_alternative_tokens) : use `and` to replace `&&` etc.
+- [-nostdlib](https://gcc.gnu.org/onlinedocs/gcc/Link-Options.html#index-nostdlib)
+- view system INFO : `cat /proc/version` (kernel) or `cat /etc/issue` (system)
+- view cpu INFO : `cat /proc/cpuinfo`
+- make -n : only print inst not execute 
+- compress : `tar -cf *.tar path-to-file(dir)` uncompress : `tar -xf *.tar`
+- [ls](https://www.runoob.com/linux/linux-comm-ls.html)
+- [/etc/passwd](https://www.geeksforgeeks.org/understanding-the-etc-passwd-file/)
+- [How to use ssh](https://zhuanlan.zhihu.com/p/21999778)
+- kown_hosts : log the public key of the host you have visited
+- How to change default shell : `chsh`
+
+
+
+
+
+
+
+
+
