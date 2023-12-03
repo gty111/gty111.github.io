@@ -11,7 +11,8 @@ tags:
 > This passage is to log some tips about Linux.
 
 <!-- more -->
-- mirror for github [ghproxy](https://ghproxy.com/) (`https://mirror.ghproxy.com/`)
+- mirror for huggingface [hf-mirror](https://hf-mirror.com/)
+- mirror for github [ghproxy](https://mirror.ghproxy.com/) (`https://mirror.ghproxy.com/`)
 - [Comparison between source and assembly instruction](https://godbolt.org/)
 - [C alternative tokens](https://en.wikipedia.org/wiki/C_alternative_tokens) : use `and` to replace `&&` etc.
 - compilation flags
