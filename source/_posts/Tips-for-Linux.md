@@ -1,16 +1,17 @@
 ---
-title: Tips for Linux and Programming
+title: Miscellaneous tips
 toc: true
-date: 2023-03-30 19:05:56
+date: 2023-12-04 19:05:56
 categories:
 - Technology
 tags:
 - linux
 ---
 
-> This passage is to log some tips about Linux.
+> This passage is to log miscellaneous tips.
 
 <!-- more -->
+- Search paper : https://dblp.org/  Search conf : https://dblp.org/db/conf/hpca
 - mirror for huggingface [hf-mirror](https://hf-mirror.com/)
 - mirror for github [ghproxy](https://mirror.ghproxy.com/) (`https://mirror.ghproxy.com/`)
 - [Comparison between source and assembly instruction](https://godbolt.org/)
