@@ -39,7 +39,9 @@ E-mail : guoty9[at]mail2.sysu.edu.cn
 
 - [BCI: Web interface for mindwave MOBILE2(NeuroSky)](https://github.com/gty111/BCI)
 
-## Presentations
+## Presentations & HW & Dissertation
+
+- [Weekly Paper Sharing SC23](doc/Frontier.pdf) "Frontier: Exploring Exascale"
 
 - [Weekly Paper Sharing MLSYS23](doc/paper-sharing-mlsys23.pdf) "AUTOSCRATCH: ML-OPTIMIZED CACHE MANAGEMENT FOR INFERENCE-ORIENTED GPUS"
 
