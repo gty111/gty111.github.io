@@ -11,6 +11,7 @@ tags:
 > This passage is to log miscellaneous tips.
 
 <!-- more -->
+- list symbols in binary using `nm` https://www.man7.org/linux/man-pages/man1/nm.1.html
 - Search paper : https://dblp.org/  Search conf : https://dblp.org/db/conf/hpca
 - mirror for huggingface [hf-mirror](https://hf-mirror.com/)
 - mirror for github [ghproxy](https://mirror.ghproxy.com/) (`https://mirror.ghproxy.com/`)
