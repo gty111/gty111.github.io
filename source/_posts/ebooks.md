@@ -1,7 +1,7 @@
 ---
 title: ebooks and tutorials
 toc: true
-date: 2023-05-01 18:38:27
+date: 2023-12-14 11:28:23
 categories:
 - Technology
 tags:
@@ -12,6 +12,10 @@ tags:
 Some links about ebooks and tutorials.
 
 <!-- more -->
+
+### [Hugging Face(AI community)](https://huggingface.co/)
+
+### [Multi-Process Service(MPS)](https://docs.nvidia.com/deploy/mps/)
 
 ### [RAPIDS(GPU Accelerated Data Science)](https://rapids.ai)
 
