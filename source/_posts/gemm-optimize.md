@@ -118,28 +118,15 @@ ldgsts 分支主要来介绍使用Ampere引入的异步拷贝来优化性能
 
 ### 异步拷贝
 
-CUDA 11 includes a new asynchronous copy (async copy) API to take advantage of the A100 
-GPU’s hardware-accelerated direct-copy-to-shared functionality. Async copy performs an 
-asynchronous (non-blocking) direct memory transfer from global memory to shared memory, 
-bypassing the SM threads and combining the functions of separate “load from global memory 
-into a register”, and “write to shared memory from a register” operations into a single, efficient 
-operation. 
-
-Async copy eliminates the need for intermediate staging of data through the register file (RF), 
-reducing register file bandwidth. It also efficiently uses memory bandwidth and reduces power 
-consumption. As the name implies, async copy works asynchronously, allowing other 
-computations to occur during global-to-shared memory copies. Async copy is able to notify the 
-program of copy completion via the GPU’s new barrier feature.
-
-Bypassing L1 and the register file can significantly accelerate memory copy performance, 
-especially for multiple successive async-copy operations that copy large amounts of data from 
-global to shared memory. 
-
 ![](img/async_copy.png)
 
-Two variants of the async copy instruction are available for different usage scenarios. BYPASS, 
-which bypasses L1 cache and the register file as described above, and ACCESS which saves 
-data to L1 for subsequent accesses and reuse. 
+CUDA 11 引入了一个新的async copy(异步拷贝)API来利用 A100 GPU 硬件加速将数据从global memory(全局内存) 直接拷贝到shared memory(共享内存)。异步拷贝会执行从全局内存到共享内存的异步(非阻塞)直接内存传输(旁路SM，也就是不经过寄存器)，它将"从全局内存加载数据到寄存器"和"将数据从寄存器写入共享内存"这两个操作结合成单个且高效的操作。
+
+异步拷贝消除了通过寄存器存储中间数据的需要，进而减少了所需的寄存器访问带宽。它有效地利用了存储带宽并且降低了功耗。正如它的名字所表明，异步拷贝是异步完成的，允许其他的计算和从全局内存到共享内存的数据搬运同时发生。异步拷贝通过新的同步特性来通知程序数据搬运的完成。
+
+旁路L1和寄存器可以明显地提升数据拷贝的性能，特别是对于多个连续的异步拷贝操作，这些操作将大量数据从全局内存复制到共享内存。
+
+异步拷贝指令有两个变种，适用于不同的使用场景。BYPASS：旁路掉L1缓存和寄存器，ACCESS：将数据保存到L1以供后续访问和重用。
 
 ### cu level
 
