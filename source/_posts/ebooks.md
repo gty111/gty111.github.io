@@ -13,6 +13,10 @@ Some links about ebooks and tutorials.
 
 <!-- more -->
 
+### [Cpp docs](https://en.cppreference.com/w/)
+
+### [Python docs](https://docs.python.org/3/)
+
 ### [Hugging Face(AI community)](https://huggingface.co/)
 
 ### [Multi-Process Service(MPS)](https://docs.nvidia.com/deploy/mps/)
