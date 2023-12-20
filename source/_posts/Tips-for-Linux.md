@@ -11,6 +11,12 @@ tags:
 > This passage is to log miscellaneous tips.
 
 <!-- more -->
+- install Shadowsocks libev on Debian/Ubuntu (https://teddysun.com/358.html)
+```
+wget --no-check-certificate -O shadowsocks-libev-debian.sh https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-libev-debian.sh
+chmod +x shadowsocks-libev-debian.sh
+./shadowsocks-libev-debian.sh 2>&1 | tee shadowsocks-libev-debian.log
+```
 - list symbols in binary using `nm` https://www.man7.org/linux/man-pages/man1/nm.1.html
 - Search paper : https://dblp.org/  Search conf : https://dblp.org/db/conf/hpca
 - mirror for huggingface [hf-mirror](https://hf-mirror.com/)
