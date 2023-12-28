@@ -281,6 +281,7 @@ widgets:
         # Names and URLs of the sites
         links:
             Github: https://github.com/gty111
+            Zhihu(知乎): https://www.zhihu.com/people/nian-shao-ru-liu-shui/posts
             LeetCode: https://leetcode.cn/u/gtyinstinctx/
             CSDN: https://blog.csdn.net/gtyinstinct
     # Recent posts widget configurations
