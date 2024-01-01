@@ -11,7 +11,8 @@ tags:
 > This passage is to log miscellaneous tips.
 
 <!-- more -->
-- install Shadowsocks libev on Debian/Ubuntu (https://teddysun.com/358.html)
+- [Install Shadowsocks windows client](https://github.com/shadowsocks/shadowsocks-windows/releases/download/4.4.1.0/Shadowsocks-4.4.1.0.zip)
+- Install Shadowsocks libev on Debian/Ubuntu (https://teddysun.com/358.html)
 ```
 wget --no-check-certificate -O shadowsocks-libev-debian.sh https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-libev-debian.sh
 chmod +x shadowsocks-libev-debian.sh
