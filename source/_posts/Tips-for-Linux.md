@@ -11,6 +11,7 @@ tags:
 > This passage is to log miscellaneous tips.
 
 <!-- more -->
+- display information about ELF files `readelf` https://www.man7.org/linux/man-pages/man1/readelf.1.html
 - [Install Shadowsocks windows client](https://github.com/shadowsocks/shadowsocks-windows/releases/download/4.4.1.0/Shadowsocks-4.4.1.0.zip)
 - Install Shadowsocks libev on Debian/Ubuntu (https://teddysun.com/358.html)
 ```
