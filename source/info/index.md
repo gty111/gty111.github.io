@@ -20,7 +20,9 @@ E-mail : guoty9[at]mail2.sysu.edu.cn
 
 ## Experience
 
-- Teaching Assistant of "SYSU-DCS3013 : Computer Architecture" [2022f]
+- Research(LLM Inference) intern at Tencent [2024]
+
+- Teaching Assistant of ["SYSU-DCS3013 : Computer Architecture"](https://arcsysu.github.io/teach/dcs3013/f2022.html) [2022f]
   > release [SYSU-ARCH LAB](https://arcsysu.github.io/SYSU-ARCH)
 
 ## Projects
