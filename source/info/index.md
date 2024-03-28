@@ -43,6 +43,8 @@ E-mail : guoty9[at]mail2.sysu.edu.cn
 
 ## Presentations & HW & Dissertation
 
+- [Weekly Sharing CrossKV](doc/CrossKV-pre.pdf) "CrossKV: Reuse KV Cache Across Requests"
+
 - [Weekly Paper Sharing SC23](doc/Frontier.pdf) "Frontier: Exploring Exascale"
 
 - [Weekly Paper Sharing MLSYS23](doc/paper-sharing-mlsys23.pdf) "AUTOSCRATCH: ML-OPTIMIZED CACHE MANAGEMENT FOR INFERENCE-ORIENTED GPUS"
