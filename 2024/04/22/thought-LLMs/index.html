@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>Some thoughts on LLMs - TianYu GUO&#039;s homepage</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="TianYu GUO&#039;s homepage"><meta name="msapplication-TileImage" content="/img/favicon.svg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="TianYu GUO&#039;s homepage"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="Some unusual but wonderful thinking about LLMs."><meta property="og:type" content="blog"><meta property="og:title" content="Some thoughts on LLMs"><meta property="og:url" content="https://gty111.github.io/2024/04/22/thought-LLMs/"><meta property="og:site_name" content="TianYu GUO&#039;s homepage"><meta property="og:description" content="Some unusual but wonderful thinking about LLMs."><meta property="og:locale" content="en_US"><meta property="og:image" content="https://gty111.github.io/img/og_image.png"><meta property="article:published_time" content="2024-04-22T19:47:36.000Z"><meta property="article:modified_time" content="2024-04-22T11:56:20.067Z"><meta property="article:author" content="TianYu GUO"><meta property="article:tag" content="LLM"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://gty111.github.io/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://gty111.github.io/2024/04/22/thought-LLMs/"},"headline":"Some thoughts on LLMs","image":["https://gty111.github.io/img/og_image.png"],"datePublished":"2024-04-22T19:47:36.000Z","dateModified":"2024-04-22T11:56:20.067Z","author":{"@type":"Person","name":"TianYu GUO"},"publisher":{"@type":"Organization","name":"TianYu GUO's homepage","logo":{"@type":"ImageObject","url":"https://gty111.github.io/img/logo.jpg"}},"description":"Some unusual but wonderful thinking about LLMs."}</script><link rel="canonical" href="https://gty111.github.io/2024/04/22/thought-LLMs/"><link rel="icon" href="/img/favicon.svg"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!-- hexo injector head_end start --><script>
+  (function () {
+      function switchTab() {
+          if (!location.hash) {
+            return;
+          }
+
+          const id = '#' + CSS.escape(location.hash.substring(1));
+          const $tabMenu = document.querySelector(`.tabs a[href="${id}"]`);
+          if (!$tabMenu) {
+            return;
+          }
+
+          const $tabMenuContainer = $tabMenu.parentElement.parentElement;
+          Array.from($tabMenuContainer.children).forEach($menu => $menu.classList.remove('is-active'));
+          Array.from($tabMenuContainer.querySelectorAll('a'))
+              .map($menu => document.getElementById($menu.getAttribute("href").substring(1)))
+              .forEach($content => $content.classList.add('is-hidden'));
+
+          if ($tabMenu) {
+              $tabMenu.parentElement.classList.add('is-active');
+          }
+          const $activeTab = document.querySelector(id);
+          if ($activeTab) {
+              $activeTab.classList.remove('is-hidden');
+          }
+      }
+      switchTab();
+      window.addEventListener('hashchange', switchTab, false);
+  })();
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/logo.jpg" alt="TianYu GUO&#039;s homepage" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/info">About Me</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="GitHub" href="https://github.com/gty111"><i class="fab fa-github"></i></a><a class="navbar-item is-hidden-tablet catalogue" title="Catalogue" href="javascript:;"><i class="fas fa-list-ul"></i></a><a class="navbar-item search" title="Search" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-9-tablet is-9-desktop is-9-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item">Posted&nbsp;<time dateTime="2024-04-22T19:47:36.000Z" title="4/22/2024, 7:47:36 PM">2024-04-22</time></span><span class="level-item">Updated&nbsp;<time dateTime="2024-04-22T11:56:20.067Z" title="4/22/2024, 11:56:20 AM">2024-04-22</time></span><span class="level-item"><a class="link-muted" href="/categories/Technology/">Technology</a></span><span class="level-item">14 minutes read (About 2149 words)</span></div></div><h1 class="title is-3 is-size-4-mobile">Some thoughts on LLMs</h1><div class="content"><p>Some unusual but wonderful thinking about LLMs.</p>
+<span id="more"></span>
+
+<h2 id="Question1"><a href="#Question1" class="headerlink" title="Question1:"></a>Question1:</h2><p>大模型有多层decoder layer组成，每一层的输出有什么含义呢？</p>
+<h2 id="Answer1"><a href="#Answer1" class="headerlink" title="Answer1:"></a>Answer1:</h2><p>大型的神经网络模型，特别是那些用于处理序列到序列（seq2seq）任务的，如机器翻译、文本摘要、语音识别等，通常包含编码器（encoder）和解码器（decoder）两部分。在这些模型中，解码器通常由多个解码器层（decoder layers）组成。每一层的输出含义和作用可能会根据具体的模型架构（如Transformer）和任务有所不同，但一般来说，它们共同工作以逐步构建最终输出序列。</p>
+<p>在以Transformer模型为例的情况下，每个解码器层通常执行以下几个步骤，这有助于理解每一层输出的含义：</p>
+<ol>
+<li><p><strong>自注意力机制（Self-Attention Mechanism）</strong>：在这一步，解码器层会关注到目前为止已经生成的输出序列中的所有元素（即，它会“自我关注”）。这允许模型学习输出序列内部的关系。例如，在翻译任务中，这可以帮助模型理解目标语言中词与词之间的语法和语义关系。</p>
+</li>
+<li><p><strong>编码器-解码器注意力机制（Encoder-Decoder Attention）</strong>：这一步使得每个解码器层能够关注到编码器的全部输出。通过这种方式，解码器可以学习如何结合源序列的信息来生成正确的目标序列。在翻译任务中，这有助于模型对齐源语言和目标语言中的词汇。</p>
+</li>
+<li><p><strong>前馈神经网络（Feed-Forward Neural Network）</strong>：解码器层的这一部分进一步处理信息，增加了额外的计算能力来帮助模型学习复杂的映射关系。</p>
+</li>
+</ol>
+<p>每一层的输出都是基于前一层的输出（除了第一层解码器层，它是基于编码器的输出），并且每一层都试图在前一层的基础上增加更多的信息和上下文理解。因此，每一层的输出可以被看作是对目标序列更加精细和复杂的表示。随着数据通过更多的解码器层，模型能够逐渐构建出更加准确和自然的输出序列。</p>
+<p>最终，解码器的最后一层输出会被送入一个线性层和一个softmax层，以生成对每个可能的下一个词的概率分布。从这个分布中选择概率最高的词作为这一时间步的输出，然后这个输出会被送回解码器作为下一个时间步的输入，直到生成序列结束的标志（如一个特殊的结束符）。</p>
+<p>总的来说，每一层的输出都是对目标序列的一个更加完善的表示，每一层都在尝试捕捉不同的特征和关系，以帮助模型更好地完成其任务。</p>
+<h2 id="Question2"><a href="#Question2" class="headerlink" title="Question2:"></a>Question2:</h2><p>解码器的每一层可以交换顺序吗</p>
+<h2 id="Answer2"><a href="#Answer2" class="headerlink" title="Answer2:"></a>Answer2:</h2><p>在大多数深度学习模型中，特别是在像Transformer这样的模型中，解码器的每一层都是按照特定顺序堆叠起来的，每一层的输出都作为下一层的输入。这种设计是有意为之的，因为每一层都在前一层的基础上进一步提炼和处理信息。因此，解码器的层通常不能随意交换顺序。</p>
+<p>以下是几个原因说明为什么解码器层的顺序很重要，不能随意交换：</p>
+<ol>
+<li><p><strong>信息处理的递进性</strong>：在解码器中，每一层都在前一层处理过的信息基础上进一步构建其输出。前面的层可能专注于捕捉更基础或更局部的特征，而后面的层则可能在此基础上捕捉更复杂或更全局的特征。这种递进性是模型设计的一部分，以确保模型能够有效地学习从输入到输出的复杂映射。</p>
+</li>
+<li><p><strong>训练过程中的权重调整</strong>：在训练过程中，每一层的权重都是根据其在整个网络中的位置和作用进行调整的。如果改变层的顺序，那么这些权重的调整就不再适合新的配置，因为每一层的输入-输出关系已经改变。</p>
+</li>
+<li><p><strong>特定架构的设计考虑</strong>：许多模型架构，包括Transformer，都有着特定的设计考虑，这些设计考虑决定了层的顺序和功能。例如，Transformer解码器中的自注意力机制、编码器-解码器注意力机制和前馈神经网络的特定顺序是为了确保模型能够有效地处理序列数据，同时考虑到源序列和目标序列之间的依赖关系。</p>
+</li>
+</ol>
+<p>因此，虽然理论上可以尝试交换解码器中层的顺序作为一种实验，但这通常会导致模型性能的显著下降，因为这违背了模型设计的初衷和优化的基础。在实际应用中，保持解码器层的顺序不变是确保模型达到最佳性能的关键因素之一。</p>
+<h2 id="Question3"><a href="#Question3" class="headerlink" title="Question3:"></a>Question3:</h2><p>在推理阶段可以减少解码器的层数以加速推理吗</p>
+<h2 id="Answer3"><a href="#Answer3" class="headerlink" title="Answer3:"></a>Answer3:</h2><p>在推理阶段减少解码器的层数以加速推理是一个有趣的想法，但这种做法需要谨慎考虑，因为它可能会对模型的性能产生显著影响。以下是一些关于这种做法的考虑点：</p>
+<p>可能的性能影响</p>
+<ul>
+<li><strong>准确性下降</strong>：解码器的每一层都贡献于模型对数据的理解和处理能力。减少层数可能会导致模型失去捕捉数据中重要特征和关系的能力，进而影响模型的准确性和生成质量。</li>
+<li><strong>上下文理解能力减弱</strong>：在一些任务中，如机器翻译或文本生成，模型需要理解长距离依赖和复杂的上下文信息。较少的解码器层数可能会减弱模型处理这些复杂性的能力。</li>
+</ul>
+<p>实施方法</p>
+<p>如果你决定在推理阶段尝试减少解码器的层数，以下是一些可能的实施方法：</p>
+<ul>
+<li><strong>蒸馏（Distillation）</strong>：一种可能的方法是使用知识蒸馏，这是一种将大模型（教师模型）的知识转移到小模型（学生模型）的技术。在这种情况下，原始的、层数较多的模型可以用作教师模型，而一个设计有较少解码器层数的新模型可以作为学生模型。通过这种方式，即使在层数减少的情况下，学生模型也可能保留较高的性能。</li>
+<li><strong>重新训练</strong>：如果决定减少解码器层数，可能需要对模型进行重新训练，以适应新的架构。这意味着需要有足够的数据和计算资源来完成这一过程。</li>
+</ul>
+<p>替代方案</p>
+<ul>
+<li><strong>模型压缩和优化</strong>：除了减少层数，还有其他方法可以加速推理，如模型剪枝、量化和知识蒸馏，这些方法旨在减小模型大小和&#x2F;或提高运行效率，同时尽量保持模型性能。</li>
+<li><strong>使用更轻量级的模型架构</strong>：另一种方法是使用设计为更轻量级的模型架构，这些架构在设计时就考虑了推理速度和效率。</li>
+</ul>
+<p>总之，虽然在推理阶段减少解码器的层数可能会加速推理过程，但这种做法需要谨慎考虑，因为它可能会牺牲模型的性能。在实际应用中，探索其他模型优化和加速技术可能是更可取的方法。</p>
+</div><div class="article-licensing box"><div class="licensing-title"><p>Some thoughts on LLMs</p><p><a href="https://gty111.github.io/2024/04/22/thought-LLMs/">https://gty111.github.io/2024/04/22/thought-LLMs/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>Author</h6><p>TianYu GUO</p></div></div><div class="level-item is-narrow"><div><h6>Posted on</h6><p>2024-04-22</p></div></div><div class="level-item is-narrow"><div><h6>Updated on</h6><p>2024-04-22</p></div></div><div class="level-item is-narrow"><div><h6>Licensed under</h6><p><a class="icons" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="icon fab fa-creative-commons"></i></a><a class="icons" rel="noopener" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="icon fab fa-creative-commons-by"></i></a><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/LLM/">LLM</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2023/12/14/ebooks/"><span class="level-item">ebooks and tutorials</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><div class="card"><div class="card-content"><h3 class="title is-5">Comments</h3><div id="disqus_thread"><noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript></div><script>var disqus_config = function () {
+            this.page.url = 'https://gty111.github.io/2024/04/22/thought-LLMs/';
+            this.page.identifier = '2024/04/22/thought-LLMs/';
+        };
+        (function() {
+            var d = document, s = d.createElement('script');  
+            s.src = '//' + 'gty111' + '.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();</script></div></div></div><div class="column column-left is-3-tablet is-3-desktop is-3-widescreen  order-1"><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">Recents</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2024-04-22T19:47:36.000Z">2024-04-22</time></p><p class="title"><a href="/2024/04/22/thought-LLMs/">Some thoughts on LLMs</a></p><p class="categories"><a href="/categories/Technology/">Technology</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-12-14T11:28:23.000Z">2023-12-14</time></p><p class="title"><a href="/2023/12/14/ebooks/">ebooks and tutorials</a></p><p class="categories"><a href="/categories/Technology/">Technology</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-12-04T19:05:56.000Z">2023-12-04</time></p><p class="title"><a href="/2023/12/04/Tips-for-Linux/">Miscellaneous tips</a></p><p class="categories"><a href="/categories/Technology/">Technology</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-06-20T18:57:25.000Z">2023-06-20</time></p><p class="title"><a href="/2023/06/20/gemm-optimize/">Optimize GEMM step by step</a></p><p class="categories"><a href="/categories/Technology/">Technology</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-05-14T11:48:32.000Z">2023-05-14</time></p><p class="title"><a href="/2023/05/14/learn-cutlass-5/">learn-cutlass-5</a></p><p class="categories"><a href="/categories/Technology/">Technology</a></p></div></article></div></div><div class="card widget" id="toc" data-type="toc"><div class="card-content"><div class="menu"><h3 class="menu-label">Catalogue</h3><ul class="menu-list"><li><a class="level is-mobile" href="#Question1"><span class="level-left"><span class="level-item">1</span><span class="level-item">Question1:</span></span></a></li><li><a class="level is-mobile" href="#Answer1"><span class="level-left"><span class="level-item">2</span><span class="level-item">Answer1:</span></span></a></li><li><a class="level is-mobile" href="#Question2"><span class="level-left"><span class="level-item">3</span><span class="level-item">Question2:</span></span></a></li><li><a class="level is-mobile" href="#Answer2"><span class="level-left"><span class="level-item">4</span><span class="level-item">Answer2:</span></span></a></li><li><a class="level is-mobile" href="#Question3"><span class="level-left"><span class="level-item">5</span><span class="level-item">Question3:</span></span></a></li><li><a class="level is-mobile" href="#Answer3"><span class="level-left"><span class="level-item">6</span><span class="level-item">Answer3:</span></span></a></li></ul></div></div><style>#toc .menu-list > li > a.is-active + .menu-list { display: block; }#toc .menu-list > li > a + .menu-list { display: none; }</style><script src="/js/toc.js" defer></script></div><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">Categories</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/Technology/"><span class="level-start"><span class="level-item">Technology</span></span><span class="level-end"><span class="level-item tag">13</span></span></a></li><li><a class="level is-mobile" href="/categories/essay/"><span class="level-start"><span class="level-item">essay</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/log/"><span class="level-start"><span class="level-item">log</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">Tags</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/GEMM/"><span class="tag">GEMM</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/GPU/"><span class="tag">GPU</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Hexo/"><span class="tag">Hexo</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/IR/"><span class="tag">IR</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Icarus/"><span class="tag">Icarus</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/LLM/"><span class="tag">LLM</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/NVIDIA/"><span class="tag">NVIDIA</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/cutlass/"><span class="tag">cutlass</span><span class="tag">7</span></a></div><div class="control"><a class="tags has-addons" href="/tags/ebook/"><span class="tag">ebook</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/github/"><span class="tag">github</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/tips/"><span class="tag">tips</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/tutorial/"><span class="tag">tutorial</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E4%B8%80%E7%94%9F%E4%B8%80%E8%8A%AF/"><span class="tag">一生一芯</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%86%B0%E9%9B%B9/"><span class="tag">冰雹</span><span class="tag">1</span></a></div></div></div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/logo.jpg" alt="TianYu GUO&#039;s homepage" height="28"></a><p class="is-size-7"><span>&copy; 2024 TianYu GUO</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("en");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="Back to top" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "This website uses cookies to improve your experience.",
+          dismiss: "Got it!",
+          allow: "Allow cookies",
+          deny: "Decline",
+          link: "Learn more",
+          policy: "Cookie Policy",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css"><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/auto-render.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/mhchem.min.js" defer></script><script>window.addEventListener("load", function() {
+            document.querySelectorAll('[role="article"] > .content').forEach(function(element) {
+                renderMathInElement(element);
+            });
+        });</script><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="Type something..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"Type something...","untitled":"(Untitled)","posts":"Posts","pages":"Pages","categories":"Categories","tags":"Tags"});
+        });</script></body></html>
