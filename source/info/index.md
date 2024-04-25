@@ -18,6 +18,10 @@ E-mail : guoty9[at]mail2.sysu.edu.cn
 | 2018 - 2022 | Xidian University      | B.S.   |
 
 
+## Publications
+
+- Tianyu Guo, Xuanteng Huang, Kan Wu, Xianwei Zhang and Nong Xiao, [SMILE: LLC-based Shared Memory Expansion to Improve GPU Thread Level Parallelism](doc/DAC_24_L2.pdf), The 61st ACM/IEEE Design Automation Conference (DAC), San Francisco, CA, United States, June 2024.
+
 ## Experience
 
 - Research(LLM Inference) intern at Tencent [2024]
