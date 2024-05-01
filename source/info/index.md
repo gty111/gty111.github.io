@@ -6,21 +6,16 @@ title: Tianyu Guo (郭天宇)
 
 E-mail : guoty9[at]mail2.sysu.edu.cn
 
-## [My Resume](doc/resume.pdf)
-
 ---
 
-## Education Experience
+## About
 
-| year        | university             | degree |
-| ----------- | ---------------------- | ------ |
-| 2022 - now  | Sun Yat-Sen University | Master |
-| 2018 - 2022 | Xidian University      | B.S.   |
+I'm a second-year master student of Computer Science and Technology at [Sun Yat-Sen University](https://www.sysu.edu.cn/) advised by Assoc. Prof. [Xianwei Zhang](https://xianweiz.github.io/). I completed bachelor degree at [Xidian University](https://www.xidian.edu.cn/). My reasearch insterests lies in GPU architecture, HPC and LLM inference. Check out my [resume](doc/resume.pdf) for more details.  
 
 
 ## Publications
 
-- Tianyu Guo, Xuanteng Huang, Kan Wu, Xianwei Zhang and Nong Xiao, [SMILE: LLC-based Shared Memory Expansion to Improve GPU Thread Level Parallelism](doc/DAC_24_L2.pdf), The 61st ACM/IEEE Design Automation Conference (DAC), San Francisco, CA, United States, June 2024.
+- **Tianyu Guo**, Xuanteng Huang, Kan Wu, Xianwei Zhang and Nong Xiao, [SMILE: LLC-based Shared Memory Expansion to Improve GPU Thread Level Parallelism](doc/DAC_24_L2.pdf), The 61st ACM/IEEE Design Automation Conference (DAC), San Francisco, CA, United States, June 2024.
 
 ## Experience
 
