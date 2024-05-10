@@ -10,7 +10,7 @@ E-mail : guoty9[at]mail2.sysu.edu.cn
 
 ## About
 
-I'm a second-year master student of Computer Science and Technology at [Sun Yat-Sen University](https://www.sysu.edu.cn/) advised by Assoc. Prof. [Xianwei Zhang](https://xianweiz.github.io/). I completed bachelor degree at [Xidian University](https://www.xidian.edu.cn/). My reasearch insterests lies in GPU architecture, HPC and LLM inference. Check out my [resume](doc/resume.pdf) for more details.  
+I'm a second-year master student of Computer Science and Technology at [Sun Yat-Sen University](https://www.sysu.edu.cn/) advised by Assoc. Prof. [Xianwei Zhang](https://xianweiz.github.io/). I completed bachelor degree at [Xidian University](https://www.xidian.edu.cn/). My reasearch insterest lies in GPU architecture, HPC and LLM inference. Check out my [resume](doc/resume.pdf) for more details.  
 
 
 ## Publications
