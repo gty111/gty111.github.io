@@ -42,6 +42,9 @@ I'm a second-year master student of Computer Science and Technology at [Sun Yat-
 
 ## Presentations & HW & Dissertation
 
+- [DAC'24 SMILE](doc/DAC_slide.pdf) "SMILE: LLC-based Shared Memory Expansion to Improve GPU
+Thread Level Parallelism"
+
 - [Weekly Sharing CrossKV](doc/CrossKV-pre.pdf) "CrossKV: Reuse KV Cache Across Requests"
 
 - [Weekly Paper Sharing SC23](doc/Frontier.pdf) "Frontier: Exploring Exascale"
