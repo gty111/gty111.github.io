@@ -10,7 +10,7 @@ E-mail : guoty9[at]mail2.sysu.edu.cn
 
 ## About
 
-I'm a second-year master student of Computer Science and Technology at [Sun Yat-Sen University](https://www.sysu.edu.cn/) advised by Assoc. Prof. [Xianwei Zhang](https://xianweiz.github.io/). I completed bachelor degree at [Xidian University](https://www.xidian.edu.cn/). My reasearch insterest lies in GPU architecture, HPC and LLM inference. Check out my [resume](doc/resume.pdf) for more details.  
+I'm a second-year PH.D. student of Computer Science and Technology at [Sun Yat-Sen University](https://www.sysu.edu.cn/) advised by Assoc. Prof. [Xianwei Zhang](https://xianweiz.github.io/). I completed bachelor degree at [Xidian University](https://www.xidian.edu.cn/). My reasearch insterest lies in GPU architecture, HPC and LLM inference. Check out my [resume](doc/resume.pdf) for more details.  
 
 
 ## Publications
@@ -19,7 +19,7 @@ I'm a second-year master student of Computer Science and Technology at [Sun Yat-
 
 ## Experience
 
-- Research(LLM Inference) intern at Tencent [2024]
+- Research (LLM Inference) intern at [Tencent](https://www.tencent.com/) [2024]
 
 - Teaching Assistant of ["SYSU-DCS3013 : Computer Architecture"](https://arcsysu.github.io/teach/dcs3013/f2022.html) [2022f]
   > release [SYSU-ARCH LAB](https://arcsysu.github.io/SYSU-ARCH)
@@ -42,8 +42,7 @@ I'm a second-year master student of Computer Science and Technology at [Sun Yat-
 
 ## Presentations & HW & Dissertation
 
-- [DAC'24 SMILE](doc/DAC_slide.pdf) "SMILE: LLC-based Shared Memory Expansion to Improve GPU
-Thread Level Parallelism"
+- [DAC'24 SMILE](doc/DAC_slide.pdf) "SMILE: LLC-based Shared Memory Expansion to Improve GPU Thread Level Parallelism"
 
 - [Weekly Sharing CrossKV](doc/CrossKV-pre.pdf) "CrossKV: Reuse KV Cache Across Requests"
 
