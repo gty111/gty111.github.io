@@ -42,6 +42,10 @@ I'm a second-year PH.D. student of Computer Science and Technology at [Sun Yat-S
 
 ## Presentations & HW & Dissertation
 
+- [KVsail](doc/KVsail.pdf)
+
+- [Work report 24 summer](doc/work%20report%2024s.pdf)
+
 - [DAC'24 SMILE](doc/DAC_slide.pdf) "SMILE: LLC-based Shared Memory Expansion to Improve GPU Thread Level Parallelism"
 
 - [Weekly Sharing CrossKV](doc/CrossKV-pre.pdf) "CrossKV: Reuse KV Cache Across Requests"
@@ -50,7 +54,7 @@ I'm a second-year PH.D. student of Computer Science and Technology at [Sun Yat-S
 
 - [Weekly Paper Sharing MLSYS23](doc/paper-sharing-mlsys23.pdf) "AUTOSCRATCH: ML-OPTIMIZED CACHE MANAGEMENT FOR INFERENCE-ORIENTED GPUS"
 
-- [Work report 22-23](doc/work%20report%201.pdf) 
+- [Work report 22-23](doc/work%20report%2022-23.pdf) 
 
 - [Weekly Paper Sharing HPCA23](doc/paper-sharing-hpca23.pdf) "DIMM-Link: Enabling Efficient Inter-DIMM Communication for Near-Memory Processing"
 
