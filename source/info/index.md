@@ -42,7 +42,7 @@ I'm a second-year PH.D. student of Computer Science and Technology at [Sun Yat-S
 
 ## Presentations & HW & Dissertation
 
-- [KVsail](doc/KVsail.pdf)
+- [KVsail](doc/KVsail.pdf) "KVsail: Cross-request KV cache with Session Management and Dynamic Offloading for Large Language Model Serving"
 
 - [Work report 24 summer](doc/work%20report%2024s.pdf)
 
