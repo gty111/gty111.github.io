@@ -11,6 +11,7 @@ tags:
 > This passage is to log miscellaneous tips.
 
 <!-- more -->
+- [Internet's icon library and toolkit](https://fontawesome.com/)
 - [Use HEU_KMS for Windows Activation](https://github.com/zbezj/HEU_KMS_Activator)
 - [How to give a technical presentation](https://homes.cs.washington.edu/~mernst/advice/giving-talk.html)
 - [Chatbot Arena: Benchmarking LLMs in the Wild](https://chat.lmsys.org/)
