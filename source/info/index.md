@@ -17,6 +17,8 @@ I'm a second-year PH.D. student of Computer Science and Technology at [Sun Yat-S
 
 - **Tianyu Guo**, Xuanteng Huang, Kan Wu, Xianwei Zhang and Nong Xiao, [SMILE: LLC-based Shared Memory Expansion to Improve GPU Thread Level Parallelism](doc/DAC_24_L2.pdf), The 61st ACM/IEEE Design Automation Conference (DAC), San Francisco, CA, United States, June 2024.
 
+- Mengyue Xi, **Tianyu Guo**, Xuanteng Huang, Zejia Lin, Xianwei Zhang, [Mpache: Interaction Aware Multi-level Cache Bypassing on GPUs](), The 30th Asia and South Pacific Design Automation Conference (ASP-DAC), Tokyo Odaiba Miraikan, Japan, January 2025.
+
 ## Experience
 
 - Research (LLM Inference) intern at [Tencent](https://www.tencent.com/) [2024]
