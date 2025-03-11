@@ -10,20 +10,24 @@ E-mail : guoty9[at]mail2.sysu.edu.cn
 
 ## About
 
-I'm a second-year PH.D. student of Computer Science and Technology at [Sun Yat-Sen University](https://www.sysu.edu.cn/) advised by Assoc. Prof. [Xianwei Zhang](https://xianweiz.github.io/). I completed bachelor degree at [Xidian University](https://www.xidian.edu.cn/). My reasearch insterest lies in GPU architecture, HPC and LLM inference. Check out my [resume](doc/resume.pdf) for more details.  
+I'm a third-year PH.D. student of Computer Science and Technology at [Sun Yat-Sen University](https://www.sysu.edu.cn/) co-advised by Assoc. Prof. [Xianwei Zhang](https://xianweiz.github.io/) and Prof. [Nong Xiao](https://cse.sysu.edu.cn/content/2484) . I completed bachelor degree at [Xidian University](https://www.xidian.edu.cn/). My reasearch insterest lies in GPU architecture and MLSys. Check out my **[RESUME](doc/resume.pdf)** for more details.  
 
 
 ## Publications
 
-- **Tianyu Guo**, Xuanteng Huang, Kan Wu, Xianwei Zhang and Nong Xiao, [SMILE: LLC-based Shared Memory Expansion to Improve GPU Thread Level Parallelism](doc/DAC_24_L2.pdf), The 61st ACM/IEEE Design Automation Conference (DAC), San Francisco, CA, United States, June 2024.
+- [DAC'24] [\[DOI\]](https://doi.org/10.1145/3649329.3655906) [\[Slide\]](doc/DAC_slide.pdf) 
+[SMILE: LLC-based Shared Memory Expansion to Improve GPU Thread Level Parallelism](doc/DAC_24_L2.pdf)   
+**Tianyu Guo**, Xuanteng Huang, Kan Wu, Xianwei Zhang and Nong Xiao, The 61st ACM/IEEE Design Automation Conference (DAC), San Francisco, CA, United States, June 2024.
 
-- Mengyue Xi, **Tianyu Guo**, Xuanteng Huang, Zejia Lin, Xianwei Zhang, [Mpache: Interaction Aware Multi-level Cache Bypassing on GPUs](), The 30th Asia and South Pacific Design Automation Conference (ASP-DAC), Tokyo Odaiba Miraikan, Japan, January 2025.
+- [ASP-DAC'25] [\[DOI\]](https://doi.org/10.1145/3658617.3697568) 
+[Mpache: Interaction Aware Multi-level Cache Bypassing on GPUs](doc/mpache_aspdac25.pdf) 
+Mengyue Xi, **Tianyu Guo**, Xuanteng Huang, Zejia Lin, Xianwei Zhang, The 30th Asia and South Pacific Design Automation Conference (ASP-DAC), Tokyo Odaiba Miraikan, Japan, January 2025.
 
 ## Experience
 
-- Research (LLM Inference) intern at [Tencent](https://www.tencent.com/) [2024]
+- Research intern focus on LLM Inference at [Tencent](https://www.tencent.com/) [2024.1-2024.6]
 
-- Teaching Assistant of ["SYSU-DCS3013 : Computer Architecture"](https://arcsysu.github.io/teach/dcs3013/f2022.html) [2022f]
+- Teaching Assistant of ["SYSU-DCS3013 : Computer Architecture"](https://arcsysu.github.io/teach/dcs3013/f2022.html) [2022.10-2023.1]
   > release [SYSU-ARCH LAB](https://arcsysu.github.io/SYSU-ARCH)
 
 ## Projects
@@ -47,8 +51,6 @@ I'm a second-year PH.D. student of Computer Science and Technology at [Sun Yat-S
 - [KVsail](doc/KVsail.pdf) "KVsail: Cross-request KV cache with Session Management and Dynamic Offloading for Large Language Model Serving"
 
 - [Work report 24 summer](doc/work%20report%2024s.pdf)
-
-- [DAC'24 SMILE](doc/DAC_slide.pdf) "SMILE: LLC-based Shared Memory Expansion to Improve GPU Thread Level Parallelism"
 
 - [Weekly Sharing CrossKV](doc/CrossKV-pre.pdf) "CrossKV: Reuse KV Cache Across Requests"
 

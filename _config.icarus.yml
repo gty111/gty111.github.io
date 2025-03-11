@@ -112,9 +112,18 @@ navbar:
         Tags: /tags
     # Links to be shown on the right of the navigation bar
     links:
-        GitHub:
+        ORCID:
+            icon: fa-brands fa-orcid
+            url: https://orcid.org/0009-0005-2979-4486
+        Github:
             icon: fab fa-github
             url: https://github.com/gty111
+        Zhihu:
+            icon: fa-brands fa-zhihu
+            url: https://www.zhihu.com/people/nian-shao-ru-liu-shui/posts
+        Email:
+            icon: fa-solid fa-envelope
+            url: mailto:guoty9@mail2.sysu.edu.cn
 # Page footer configurations
 footer:
     # # Copyright text
@@ -231,7 +240,7 @@ widgets:
         # Author name
         author: TianYu GUO
         # Author title
-        author_title: Simulaters, GPU, architecture, HPC
+        author_title: GPU architecture, MLSys
         # Author's current location
         location: Guangzhou, China
         # URL or path to the avatar image
@@ -244,9 +253,15 @@ widgets:
         follow_link: https://github.com/gty111
         # Links to be shown on the bottom of the profile widget
         social_links:
+            ORCID:
+                icon: fa-brands fa-orcid
+                url: https://orcid.org/0009-0005-2979-4486
             Github:
                 icon: fab fa-github
                 url: https://github.com/gty111
+            Zhihu:
+                icon: fa-brands fa-zhihu
+                url: https://www.zhihu.com/people/nian-shao-ru-liu-shui/posts
             Email:
                 icon: fa-solid fa-envelope
                 url: mailto:guoty9@mail2.sysu.edu.cn
@@ -280,6 +295,7 @@ widgets:
         type: links
         # Names and URLs of the sites
         links:
+            ORCID: https://orcid.org/0009-0005-2979-4486
             Github: https://github.com/gty111
             Zhihu(知乎): https://www.zhihu.com/people/nian-shao-ru-liu-shui/posts
             LeetCode: https://leetcode.cn/u/gtyinstinctx/
