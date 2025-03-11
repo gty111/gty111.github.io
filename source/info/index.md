@@ -1,5 +1,5 @@
 ---
-title: Tianyu Guo (郭天宇)
+title: Tianyu Guo 郭天宇
 ---
 
 
@@ -10,7 +10,7 @@ E-mail : guoty9[at]mail2.sysu.edu.cn
 
 ## About
 
-I'm a third-year PH.D. student of Computer Science and Technology at [Sun Yat-Sen University](https://www.sysu.edu.cn/) co-advised by Assoc. Prof. [Xianwei Zhang](https://xianweiz.github.io/) and Prof. [Nong Xiao](https://cse.sysu.edu.cn/content/2484) . I completed bachelor degree at [Xidian University](https://www.xidian.edu.cn/). My reasearch insterest lies in GPU architecture and MLSys. Check out my **[RESUME](doc/resume.pdf)** for more details.  
+I'm a third-year PH.D. student of Computer Science and Technology at [Sun Yat-Sen University](https://www.sysu.edu.cn/) co-advised by Assoc. Prof. [Xianwei Zhang](https://xianweiz.github.io/) and Prof. [Nong Xiao](https://cse.sysu.edu.cn/content/2484) . I completed bachelor degree at [Xidian University](https://www.xidian.edu.cn/). My reasearch insterest lies in GPU architecture and MLSys. I'm also passionate about the open source community [(Check out my projects/PRs)](https://github.com/gty111). You can also have a look at my **[RESUME](doc/resume.pdf)** for more details.  
 
 
 ## Publications
@@ -25,10 +25,14 @@ Mengyue Xi, **Tianyu Guo**, Xuanteng Huang, Zejia Lin, Xianwei Zhang, The 30th A
 
 ## Experience
 
+<img src="../img/Tencent_logo.jpg" width=150> 
+
 - Research intern focus on LLM Inference at [Tencent](https://www.tencent.com/) [2024.1-2024.6]
 
+<img src="../img/ARSYSU_logo.png" width=90> 
+
 - Teaching Assistant of ["SYSU-DCS3013 : Computer Architecture"](https://arcsysu.github.io/teach/dcs3013/f2022.html) [2022.10-2023.1]
-  > release [SYSU-ARCH LAB](https://arcsysu.github.io/SYSU-ARCH)
+Release [SYSU-ARCH LAB](https://arcsysu.github.io/SYSU-ARCH)
 
 ## Projects
 
