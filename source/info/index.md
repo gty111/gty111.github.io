@@ -25,14 +25,22 @@ Mengyue Xi, **Tianyu Guo**, Xuanteng Huang, Zejia Lin, Xianwei Zhang, The 30th A
 
 ## Experience
 
-<img src="../img/Tencent_logo.jpg" width=150> 
+<img src="../img/Tencent_logo.jpg" width=150> <div style="float: right;">2024.01 - 2024.06</div>
 
-- Research intern focus on LLM Inference at [Tencent](https://www.tencent.com/) [2024.1-2024.6]
+- Research intern at [Tencent](https://www.tencent.com/) 
+    - KV cache reuse and offloading
+    - LLMs inference systems with extreme performance
 
-<img src="../img/ARSYSU_logo.png" width=90> 
+<img src="../img/ACTIC_logo.png" width=120> <div style="float: right;">2023.08 - 2023.12</div>
 
-- Teaching Assistant of ["SYSU-DCS3013 : Computer Architecture"](https://arcsysu.github.io/teach/dcs3013/f2022.html) [2022.10-2023.1]
-Release [SYSU-ARCH LAB](https://arcsysu.github.io/SYSU-ARCH)
+- Participate and win the 2nd prize of A3 track in the 1st [ACTIC](http://www.ac-innovation.com) 
+    - [\[Preliminary\]](doc/ACTIC_preliminary_presentation.pdf)/[\[Final\]](doc/ACTIC_Final_Presentation.pdf) Presentations and [\[Technical Report\]](doc/ACTIC_tech_report.pdf)
+    - Operator implementation and performance optimization with vector instruction set
+
+<img src="../img/ARSYSU_logo.png" width=90> <div style="float: right;">2022.10 - 2023.01</div>
+
+- Teaching Assistant of ["SYSU-DCS3013 : Computer Architecture"](https://arcsysu.github.io/teach/dcs3013/f2022.html) 
+    - Release [\[SYSU-ARCH LAB\]](https://arcsysu.github.io/SYSU-ARCH) that focuses on the use and extending of simulators
 
 ## Projects
 
