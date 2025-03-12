@@ -28,7 +28,7 @@ Mengyue Xi, **Tianyu Guo**, Xuanteng Huang, Zejia Lin, Xianwei Zhang, The 30th A
 <img src="../img/Tencent_logo.jpg" width=150> <div style="float: right;">2024.01 - 2024.06</div>
 
 - Research intern at [Tencent](https://www.tencent.com/) 
-    - KV cache reuse and offloading
+    - [\[CrossKV\]](doc/CrossKV-pre.pdf)[\[KVsail\]](doc/KVsail.pdf) KV cache reuse and offloading
     - LLMs inference systems with extreme performance
 
 <img src="../img/ACTIC_logo.png" width=120> <div style="float: right;">2023.08 - 2023.12</div>
@@ -60,11 +60,7 @@ Mengyue Xi, **Tianyu Guo**, Xuanteng Huang, Zejia Lin, Xianwei Zhang, The 30th A
 
 ## Presentations & HW & Dissertation
 
-- [KVsail](doc/KVsail.pdf) "KVsail: Cross-request KV cache with Session Management and Dynamic Offloading for Large Language Model Serving"
-
 - [Work report 24 summer](doc/work%20report%2024s.pdf)
-
-- [Weekly Sharing CrossKV](doc/CrossKV-pre.pdf) "CrossKV: Reuse KV Cache Across Requests"
 
 - [Weekly Paper Sharing SC23](doc/Frontier.pdf) "Frontier: Exploring Exascale"
 
