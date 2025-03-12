@@ -238,9 +238,9 @@ widgets:
         position: left
         type: profile
         # Author name
-        author: TianYu GUO
+        author: Tianyu Guo
         # Author title
-        author_title: GPU architecture, MLSys
+        author_title: GPU architecture, MLSys, AI Infra
         # Author's current location
         location: Guangzhou, China
         # URL or path to the avatar image

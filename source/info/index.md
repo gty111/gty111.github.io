@@ -10,7 +10,7 @@ E-mail : guoty9[at]mail2.sysu.edu.cn
 
 ## About
 
-I'm a third-year PH.D. student of Computer Science and Technology at [Sun Yat-Sen University](https://www.sysu.edu.cn/) co-advised by Assoc. Prof. [Xianwei Zhang](https://xianweiz.github.io/) and Prof. [Nong Xiao](https://cse.sysu.edu.cn/content/2484) . I completed bachelor degree at [Xidian University](https://www.xidian.edu.cn/). My reasearch insterest lies in GPU architecture and MLSys. I'm also passionate about the open source community [(Check out my projects/PRs)](https://github.com/gty111). You can also have a look at my **[RESUME](doc/resume.pdf)** for more details.  
+I'm a third-year PH.D. student of Computer Science and Technology at [Sun Yat-Sen University](https://www.sysu.edu.cn/) co-advised by Assoc. Prof. [Xianwei Zhang](https://xianweiz.github.io/) and Prof. [Nong Xiao](https://cse.sysu.edu.cn/content/2484) . I completed bachelor degree at [Xidian University](https://www.xidian.edu.cn/). My reasearch insterest lies in GPU architecture,MLSys and AI Infra. I'm also passionate about the open source community [(Check out my projects/PRs)](https://github.com/gty111). You can also have a look at my **[RESUME](doc/resume.pdf)** for more details.  
 
 
 ## Publications
