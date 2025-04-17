@@ -15,7 +15,7 @@ I'm a third-year PH.D. student of Computer Science and Technology at [Sun Yat-Se
 
 ## Publications
 
-- [DAC'24] [\[DOI\]](https://doi.org/10.1145/3649329.3655906) [\[Slide\]](doc/DAC_slide.pdf) 
+- [DAC'24] [\[DOI\]](https://doi.org/10.1145/3649329.3655906) [\[Slide\]](doc/DAC_slide.pdf) <img src="../img/smile_logo.png" width=50> 
 [SMILE: LLC-based Shared Memory Expansion to Improve GPU Thread Level Parallelism](doc/DAC_24_L2.pdf)   
 **Tianyu Guo**, Xuanteng Huang, Kan Wu, Xianwei Zhang and Nong Xiao, The 61st ACM/IEEE Design Automation Conference (DAC), San Francisco, CA, United States, June 2024.
 
