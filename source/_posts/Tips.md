@@ -11,6 +11,7 @@ tags:
 > This passage is to log miscellaneous tips.
 
 <!-- more -->
+- [Check the network compatibility of your mobile phones](https://www.kimovil.com/)
 - [Ten Simple Rules to becoming a principal investigator](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1007448)
 - [Internet's icon library and toolkit](https://fontawesome.com/)
 - [Use HEU_KMS for Windows Activation](https://github.com/zbezj/HEU_KMS_Activator)
