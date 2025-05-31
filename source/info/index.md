@@ -19,7 +19,7 @@ I'm a third-year PH.D. student of Computer Science and Technology at [Sun Yat-Se
 gLLM: Global Balanced Pipeline Parallelism System for Distributed LLM Serving with Token Throttling
 **Tianyu Guo**, Xianwei Zhang, Jiangsu Du, Zhiguang Chen, Nong Xiao, Yutong Lu
 
-- [Euro-Par'25] [\[Github\]](https://github.com/gty111/EFIM)
+- [Euro-Par'25] [\[arXiv\]](https://arxiv.org/abs/2505.21889) [\[Github\]](https://github.com/gty111/EFIM)
 [EFIM: Efficient Serving of LLMs for Infilling Tasks with Improved KV Cache Reuse]()
 **Tianyu Guo**, Hande Dong, Yichong Leng, Feng Liu, Cheater Lin, Nong Xiao and Xianwei Zhang, The 31st International European Conference on Parallel and Distributed Processing, Dresden, Germany, August 2025.
 
