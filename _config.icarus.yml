@@ -295,6 +295,7 @@ widgets:
         type: links
         # Names and URLs of the sites
         links:
+            DBLP: https://dblp.org/pid/389/7247.html
             ORCID: https://orcid.org/0009-0005-2979-4486
             Github: https://github.com/gty111
             Zhihu(知乎): https://www.zhihu.com/people/nian-shao-ru-liu-shui/posts
