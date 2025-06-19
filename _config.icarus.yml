@@ -112,6 +112,9 @@ navbar:
         Tags: /tags
     # Links to be shown on the right of the navigation bar
     links:
+        Google Scholar:
+            icon: fa-solid fa-graduation-cap
+            url: https://scholar.google.com/citations?user=mZvb4k4AAAAJ
         ORCID:
             icon: fa-brands fa-orcid
             url: https://orcid.org/0009-0005-2979-4486
@@ -253,8 +256,8 @@ widgets:
         follow_link: https://github.com/gty111
         # Links to be shown on the bottom of the profile widget
         social_links:
-            Scholar:
-                icon: fa-brands fa-google-scholar
+            Google Scholar:
+                icon: fa-solid fa-graduation-cap
                 url: https://scholar.google.com/citations?user=mZvb4k4AAAAJ
             ORCID:
                 icon: fa-brands fa-orcid
