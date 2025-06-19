@@ -253,6 +253,9 @@ widgets:
         follow_link: https://github.com/gty111
         # Links to be shown on the bottom of the profile widget
         social_links:
+            Scholar:
+                icon: fa-brands fa-google-scholar
+                url: https://scholar.google.com/citations?user=mZvb4k4AAAAJ
             ORCID:
                 icon: fa-brands fa-orcid
                 url: https://orcid.org/0009-0005-2979-4486
@@ -295,6 +298,7 @@ widgets:
         type: links
         # Names and URLs of the sites
         links:
+            Google Scholar: https://scholar.google.com/citations?user=mZvb4k4AAAAJ
             DBLP: https://dblp.org/pid/389/7247.html
             ORCID: https://orcid.org/0009-0005-2979-4486
             Github: https://github.com/gty111
