@@ -16,7 +16,7 @@ I'm a third-year PH.D. student of Computer Science and Technology at [Sun Yat-Se
 ## Publications
 
 - [SC'25] [CCF-A] [\[arXiv\]](https://arxiv.org/abs/2504.14775) [\[Github\]](https://github.com/gty111/gLLM) 
-gLLM: Global Balanced Pipeline Parallelism System for Distributed LLM Serving with Token Throttling
+[gLLM: Global Balanced Pipeline Parallelism System for Distributed LLM Serving with Token Throttling]()
 **Tianyu Guo**, Xianwei Zhang, Jiangsu Du, Zhiguang Chen, Nong Xiao, Yutong Lu, The International Conference for High Performance Computing, Networking, Storage, and Analysis, St. louis, MO, United States, November 2025.
 
 - [Euro-Par'25] [CCF-B] [\[arXiv\]](https://arxiv.org/abs/2505.21889) [\[Github\]](https://github.com/gty111/EFIM)
