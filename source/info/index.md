@@ -15,19 +15,19 @@ I'm a third-year PH.D. student of Computer Science and Technology at [Sun Yat-Se
 
 ## Publications
 
-- [\[arXiv\]](https://arxiv.org/abs/2504.14775) [\[Github\]](https://github.com/gty111/gLLM) 
+- [SC'25] [CCF-A] [\[arXiv\]](https://arxiv.org/abs/2504.14775) [\[Github\]](https://github.com/gty111/gLLM) 
 gLLM: Global Balanced Pipeline Parallelism System for Distributed LLM Serving with Token Throttling
-**Tianyu Guo**, Xianwei Zhang, Jiangsu Du, Zhiguang Chen, Nong Xiao, Yutong Lu
+**Tianyu Guo**, Xianwei Zhang, Jiangsu Du, Zhiguang Chen, Nong Xiao, Yutong Lu, The International Conference for High Performance Computing, Networking, Storage, and Analysis, St. louis, MO, United States, November 2025.
 
-- [Euro-Par'25] [\[arXiv\]](https://arxiv.org/abs/2505.21889) [\[Github\]](https://github.com/gty111/EFIM)
+- [Euro-Par'25] [CCF-B] [\[arXiv\]](https://arxiv.org/abs/2505.21889) [\[Github\]](https://github.com/gty111/EFIM)
 [EFIM: Efficient Serving of LLMs for Infilling Tasks with Improved KV Cache Reuse]()
 **Tianyu Guo**, Hande Dong, Yichong Leng, Feng Liu, Cheater Lin, Nong Xiao and Xianwei Zhang, The 31st International European Conference on Parallel and Distributed Processing, Dresden, Germany, August 2025.
 
-- [ASP-DAC'25] [\[DOI\]](https://doi.org/10.1145/3658617.3697568) 
+- [ASP-DAC'25] [CCF-C] [\[DOI\]](https://doi.org/10.1145/3658617.3697568) 
 [Mpache: Interaction Aware Multi-level Cache Bypassing on GPUs](doc/mpache_aspdac25.pdf) 
 Mengyue Xi, **Tianyu Guo**, Xuanteng Huang, Zejia Lin, Xianwei Zhang, The 30th Asia and South Pacific Design Automation Conference, Tokyo Odaiba Miraikan, Japan, January 2025.
 
-- [DAC'24] [\[DOI\]](https://doi.org/10.1145/3649329.3655906) [\[Slide\]](doc/DAC_slide.pdf) <img src="../img/smile_logo.png" width=50> 
+- [DAC'24] [CCF-A] [\[DOI\]](https://doi.org/10.1145/3649329.3655906) [\[Slide\]](doc/DAC_slide.pdf) <img src="../img/smile_logo.png" width=50> 
 [SMILE: LLC-based Shared Memory Expansion to Improve GPU Thread Level Parallelism](doc/DAC_24_L2.pdf)   
 **Tianyu Guo**, Xuanteng Huang, Kan Wu, Xianwei Zhang and Nong Xiao, The 61st ACM/IEEE Design Automation Conference, San Francisco, CA, United States, June 2024.
 
