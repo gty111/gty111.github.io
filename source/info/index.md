@@ -15,12 +15,22 @@ I'm a third-year PH.D. student of Computer Science and Technology at [Sun Yat-Se
 
 ## Publications
 
+<sup>\*</sup> Equal contribution
+
+- [\[arXiv\]](https://arxiv.org/abs/2509.24381)
+[RServe: Overlapping Encoding and Prefill for Efficient LMM Inference](https://arxiv.org/pdf/2509.24381)
+**Tianyu Guo**, Tianming Xu, Xianjie Chen, Junru Chen, Nong Xiao, Xianwei Zhang
+
+- [NeurIPS'25] [CCF-A] 
+[DynaPipe: Dynamic Layer Redistribution for Efficient Serving of LLMs with Pipeline Parallelism]()
+Hongxin Xu<sup>\*</sup>, **Tianyu Guo<sup>\*</sup>** and Xianwei Zhang, The Thirty-Ninth Annual Conference on Neural Information Processing Systems, San Diego, CA, United States, December 2025.
+
 - [SC'25] [CCF-A] [\[arXiv\]](https://arxiv.org/abs/2504.14775) [\[Github\]](https://github.com/gty111/gLLM) 
-[gLLM: Global Balanced Pipeline Parallelism System for Distributed LLM Serving with Token Throttling]()
+[gLLM: Global Balanced Pipeline Parallelism System for Distributed LLM Serving with Token Throttling](https://arxiv.org/pdf/2504.14775) 
 **Tianyu Guo**, Xianwei Zhang, Jiangsu Du, Zhiguang Chen, Nong Xiao, Yutong Lu, The International Conference for High Performance Computing, Networking, Storage, and Analysis, St. louis, MO, United States, November 2025.
 
-- [Euro-Par'25] [CCF-B] [\[arXiv\]](https://arxiv.org/abs/2505.21889) [\[Github\]](https://github.com/gty111/EFIM)
-[EFIM: Efficient Serving of LLMs for Infilling Tasks with Improved KV Cache Reuse]()
+- [Euro-Par'25] [CCF-B] [\[DOI\]](https://link.springer.com/chapter/10.1007/978-3-031-99857-7_24) [\[arXiv\]](https://arxiv.org/abs/2505.21889) [\[Github\]](https://github.com/gty111/EFIM)
+[EFIM: Efficient Serving of LLMs for Infilling Tasks with Improved KV Cache Reuse](https://arxiv.org/pdf/2505.21889)
 **Tianyu Guo**, Hande Dong, Yichong Leng, Feng Liu, Cheater Lin, Nong Xiao and Xianwei Zhang, The 31st International European Conference on Parallel and Distributed Processing, Dresden, Germany, August 2025.
 
 - [ASP-DAC'25] [CCF-C] [\[DOI\]](https://doi.org/10.1145/3658617.3697568) 
@@ -32,6 +42,11 @@ Mengyue Xi, **Tianyu Guo**, Xuanteng Huang, Zejia Lin, Xianwei Zhang, The 30th A
 **Tianyu Guo**, Xuanteng Huang, Kan Wu, Xianwei Zhang and Nong Xiao, The 61st ACM/IEEE Design Automation Conference, San Francisco, CA, United States, June 2024.
 
 ## Experience
+
+<img src="../img/xiaohongshu.png" width=50> <div style="float: right;">2025.08 - Current</div>
+
+- RedStar intern at [RedNote](https://www.xiaohongshu.com/) 
+    - Large multimodal model inference and EPD disaggregation [\[RServe\]](https://arxiv.org/abs/2509.24381)
 
 <img src="../img/Tencent_logo.jpg" width=150> <div style="float: right;">2024.01 - 2024.06</div>
 
