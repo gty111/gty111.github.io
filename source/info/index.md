@@ -45,13 +45,13 @@ Mengyue Xi, **Tianyu Guo**, Xuanteng Huang, Zejia Lin, Xianwei Zhang, The 30th A
 
 <img src="../img/xiaohongshu.png" width=50> <div style="float: right;">2025.08 - Current</div>
 
-- RedStar intern at [RedNote](https://www.xiaohongshu.com/) 
-    - Large multimodal model inference and EPD disaggregation [\[RServe\]](https://arxiv.org/abs/2509.24381)
+- RedStar intern at [RedNote hilab](https://www.xiaohongshu.com/) 
+    - [\[RServe\]](https://arxiv.org/abs/2509.24381) Large multimodal model inference and EPD disaggregation 
 
 <img src="../img/Tencent_logo.jpg" width=150> <div style="float: right;">2024.01 - 2024.06</div>
 
 - Research intern at [Tencent](https://www.tencent.com/) 
-    - [\[CrossKV\]](doc/CrossKV-pre.pdf)[\[KVsail\]](doc/KVsail.pdf) KV cache reuse and offloading
+    - [\[CrossKV\]](doc/CrossKV-pre.pdf)[\[KVsail\]](doc/KVsail.pdf) [\[EFIM\]](https://arxiv.org/abs/2505.21889) KV cache reuse and offloading
     - LLMs inference systems with extreme performance
 
 <img src="../img/ACTIC_logo.png" width=120> <div style="float: right;">2023.08 - 2023.12</div>
