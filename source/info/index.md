@@ -21,16 +21,16 @@ I'm a third-year PH.D. student of Computer Science and Technology at [Sun Yat-Se
 [RServe: Overlapping Encoding and Prefill for Efficient LMM Inference](https://arxiv.org/pdf/2509.24381)
 **Tianyu Guo**, Tianming Xu, Xianjie Chen, Junru Chen, Nong Xiao, Xianwei Zhang
 
-- [NeurIPS'25] [CCF-A] 
-[DynaPipe: Dynamic Layer Redistribution for Efficient Serving of LLMs with Pipeline Parallelism]()
+- [NeurIPS'25] [CCF-A] [\[OpenReview\]](https://openreview.net/forum?id=D6w7wIN360) [\[Github\]](https://github.com/xhx1022/DynaPipe)
+[DynaPipe: Dynamic Layer Redistribution for Efficient Serving of LLMs with Pipeline Parallelism](https://openreview.net/forum?id=D6w7wIN360)
 Hongxin Xu<sup>\*</sup>, **Tianyu Guo<sup>\*</sup>** and Xianwei Zhang, The Thirty-Ninth Annual Conference on Neural Information Processing Systems, San Diego, CA, United States, December 2025.
 
-- [SC'25] [CCF-A] [\[arXiv\]](https://arxiv.org/abs/2504.14775) [\[Github\]](https://github.com/gty111/gLLM) 
-[gLLM: Global Balanced Pipeline Parallelism System for Distributed LLM Serving with Token Throttling](https://arxiv.org/pdf/2504.14775) 
+- [SC'25] [CCF-A] [\[DOI\]](https://dl.acm.org/doi/full/10.1145/3712285.3759823) [\[arXiv\]](https://arxiv.org/abs/2504.14775) [\[Github\]](https://github.com/gty111/gLLM) 
+[gLLM: Global Balanced Pipeline Parallelism System for Distributed LLM Serving with Token Throttling](https://dl.acm.org/doi/full/10.1145/3712285.3759823) 
 **Tianyu Guo**, Xianwei Zhang, Jiangsu Du, Zhiguang Chen, Nong Xiao, Yutong Lu, The International Conference for High Performance Computing, Networking, Storage, and Analysis, St. louis, MO, United States, November 2025.
 
-- [Euro-Par'25] [CCF-B] [\[DOI\]](https://link.springer.com/chapter/10.1007/978-3-031-99857-7_24) [\[arXiv\]](https://arxiv.org/abs/2505.21889) [\[Github\]](https://github.com/gty111/EFIM) [\[Slide\]](doc/EFIM_slide.pdf)
-[EFIM: Efficient Serving of LLMs for Infilling Tasks with Improved KV Cache Reuse](https://arxiv.org/pdf/2505.21889)
+- [Euro-Par'25] [CCF-B] [\[DOI\]](https://link.springer.com/chapter/10.1007/978-3-031-99857-7_24) [\[Slide\]](doc/EFIM_slide.pdf) [\[arXiv\]](https://arxiv.org/abs/2505.21889) [\[Github\]](https://github.com/gty111/EFIM)
+[EFIM: Efficient Serving of LLMs for Infilling Tasks with Improved KV Cache Reuse](https://link.springer.com/chapter/10.1007/978-3-031-99857-7_24)
 **Tianyu Guo**, Hande Dong, Yichong Leng, Feng Liu, Cheater Lin, Nong Xiao and Xianwei Zhang, The 31st International European Conference on Parallel and Distributed Processing, Dresden, Germany, August 2025.
 
 - [ASP-DAC'25] [CCF-C] [\[DOI\]](https://doi.org/10.1145/3658617.3697568) 
