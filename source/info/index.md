@@ -25,7 +25,7 @@ I'm a third-year PH.D. student of Computer Science and Technology at [Sun Yat-Se
 [DynaPipe: Dynamic Layer Redistribution for Efficient Serving of LLMs with Pipeline Parallelism](https://openreview.net/forum?id=D6w7wIN360)
 Hongxin Xu<sup>\*</sup>, **Tianyu Guo<sup>\*</sup>** and Xianwei Zhang, The Thirty-Ninth Annual Conference on Neural Information Processing Systems, San Diego, CA, United States, December 2025.
 
-- [SC'25] [CCF-A] [\[DOI\]](https://dl.acm.org/doi/full/10.1145/3712285.3759823) [\[arXiv\]](https://arxiv.org/abs/2504.14775) [\[Github\]](https://github.com/gty111/gLLM) 
+- [SC'25] [CCF-A] [\[DOI\]](https://dl.acm.org/doi/full/10.1145/3712285.3759823) [\[Slide\]](doc/gLLM_SC25.pdf) [\[arXiv\]](https://arxiv.org/abs/2504.14775) [\[Github\]](https://github.com/gty111/gLLM) 
 [gLLM: Global Balanced Pipeline Parallelism System for Distributed LLM Serving with Token Throttling](https://dl.acm.org/doi/full/10.1145/3712285.3759823) 
 **Tianyu Guo**, Xianwei Zhang, Jiangsu Du, Zhiguang Chen, Nong Xiao, Yutong Lu, The International Conference for High Performance Computing, Networking, Storage, and Analysis, St. louis, MO, United States, November 2025.
 
