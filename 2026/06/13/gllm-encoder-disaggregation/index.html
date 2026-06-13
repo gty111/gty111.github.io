@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>gLLM 推出编码器分离（Encoder-Disaggregation）：多模态推理吞吐再上台阶 - Tianyu Guo&#039;s homepage</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="Tianyu Guo&#039;s homepage"><meta name="msapplication-TileImage" content="/img/favicon.svg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Tianyu Guo&#039;s homepage"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="开源分布式 LLM 推理系统 gLLM 新增「编码器分离」能力，将视觉编码器与语言模型解耦部署，在相同 GPU 预算下显著提升多模态服务的吞吐与延迟表现。"><meta property="og:type" content="blog"><meta property="og:title" content="gLLM 推出编码器分离（Encoder-Disaggregation）：多模态推理吞吐再上台阶"><meta property="og:url" content="https://gty111.github.io/2026/06/13/gllm-encoder-disaggregation/"><meta property="og:site_name" content="Tianyu Guo&#039;s homepage"><meta property="og:description" content="开源分布式 LLM 推理系统 gLLM 新增「编码器分离」能力，将视觉编码器与语言模型解耦部署，在相同 GPU 预算下显著提升多模态服务的吞吐与延迟表现。"><meta property="og:locale" content="en_US"><meta property="og:image" content="https://gty111.github.io/img/compare_q35moe.png"><meta property="article:published_time" content="2026-06-13T23:36:00.000Z"><meta property="article:modified_time" content="2026-06-13T23:37:28.090Z"><meta property="article:author" content="Tianyu Guo"><meta property="article:tag" content="gLLM"><meta property="article:tag" content="LLM Serving"><meta property="article:tag" content="VLM"><meta property="article:tag" content="Inference"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://gty111.github.io/img/compare_q35moe.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://gty111.github.io/2026/06/13/gllm-encoder-disaggregation/"},"headline":"gLLM 推出编码器分离（Encoder-Disaggregation）：多模态推理吞吐再上台阶","image":["https://gty111.github.io/img/compare_q35moe.png"],"datePublished":"2026-06-13T23:36:00.000Z","dateModified":"2026-06-13T23:37:28.090Z","author":{"@type":"Person","name":"Tianyu Guo"},"publisher":{"@type":"Organization","name":"Tianyu Guo's homepage","logo":{"@type":"ImageObject","url":"https://gty111.github.io/img/logo.jpg"}},"description":"开源分布式 LLM 推理系统 gLLM 新增「编码器分离」能力，将视觉编码器与语言模型解耦部署，在相同 GPU 预算下显著提升多模态服务的吞吐与延迟表现。"}</script><link rel="canonical" href="https://gty111.github.io/2026/06/13/gllm-encoder-disaggregation/"><link rel="icon" href="/img/favicon.svg"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!-- hexo injector head_end start --><script>
+  (function () {
+      function switchTab() {
+          if (!location.hash) {
+            return;
+          }
+
+          const id = '#' + CSS.escape(location.hash.substring(1));
+          const $tabMenu = document.querySelector(`.tabs a[href="${id}"]`);
+          if (!$tabMenu) {
+            return;
+          }
+
+          const $tabMenuContainer = $tabMenu.parentElement.parentElement;
+          Array.from($tabMenuContainer.children).forEach($menu => $menu.classList.remove('is-active'));
+          Array.from($tabMenuContainer.querySelectorAll('a'))
+              .map($menu => document.getElementById($menu.getAttribute("href").substring(1)))
+              .forEach($content => $content.classList.add('is-hidden'));
+
+          if ($tabMenu) {
+              $tabMenu.parentElement.classList.add('is-active');
+          }
+          const $activeTab = document.querySelector(id);
+          if ($activeTab) {
+              $activeTab.classList.remove('is-hidden');
+          }
+      }
+      switchTab();
+      window.addEventListener('hashchange', switchTab, false);
+  })();
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/logo.jpg" alt="Tianyu Guo&#039;s homepage" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/info">About Me</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Google Scholar" href="https://scholar.google.com/citations?user=mZvb4k4AAAAJ"><i class="fa-solid fa-graduation-cap"></i></a><a class="navbar-item" target="_blank" rel="noopener" title="ORCID" href="https://orcid.org/0009-0005-2979-4486"><i class="fa-brands fa-orcid"></i></a><a class="navbar-item" target="_blank" rel="noopener" title="Github" href="https://github.com/gty111"><i class="fab fa-github"></i></a><a class="navbar-item" target="_blank" rel="noopener" title="Zhihu" href="https://www.zhihu.com/people/nian-shao-ru-liu-shui/posts"><i class="fa-brands fa-zhihu"></i></a><a class="navbar-item" target="_blank" rel="noopener" title="Email" href="mailto:guoty9@mail2.sysu.edu.cn"><i class="fa-solid fa-envelope"></i></a><a class="navbar-item is-hidden-tablet catalogue" title="Catalogue" href="javascript:;"><i class="fas fa-list-ul"></i></a><a class="navbar-item search" title="Search" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-9-tablet is-9-desktop is-9-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item">Posted&nbsp;<time dateTime="2026-06-13T23:36:00.000Z" title="6/13/2026, 11:36:00 PM">2026-06-13</time></span><span class="level-item">Updated&nbsp;<time dateTime="2026-06-13T23:37:28.090Z" title="6/13/2026, 11:37:28 PM">2026-06-13</time></span><span class="level-item"><a class="link-muted" href="/categories/Technology/">Technology</a></span><span class="level-item">22 minutes read (About 3241 words)</span></div></div><h1 class="title is-3 is-size-4-mobile">gLLM 推出编码器分离（Encoder-Disaggregation）：多模态推理吞吐再上台阶</h1><div class="content"><p>开源分布式 LLM 推理系统 <a target="_blank" rel="noopener" href="https://github.com/gty111/gLLM">gLLM</a> 新增「编码器分离」能力，将视觉编码器与语言模型解耦部署，在相同 GPU 预算下显著提升多模态服务的吞吐与延迟表现。</p>
+<span id="more"></span>
+
+<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>gLLM 最早起源于 <strong>SC’25</strong> 论文 <a target="_blank" rel="noopener" href="https://dl.acm.org/doi/full/10.1145/3712285.3759823">《gLLM: Global Balanced Pipeline Parallelism System for Distributed LLM Serving with Token Throttling》</a> 的实现，此后持续迭代演进，逐步发展为一个完整的分布式 LLM 推理引擎。如今它已集成 continuous batching、paged attention、chunked prefill、prefix caching、CUDA Graph、流水线&#x2F;张量&#x2F;专家并行等主流特性，对标 vLLM、SGLang 等引擎，并支持 <strong>Qwen3.5（Dense 与 MoE、GDN+全注意力混合架构、视觉语言、FP8）</strong> 等最新模型。</p>
+<p>在多模态（VLM）场景下，一次请求要先经过 <strong>视觉编码器（ViT）</strong> 把图像编码为 embedding，再交给 <strong>语言模型（LM）</strong> 做生成。两者算力特征截然不同：编码器是一次性、突发的重计算；语言模型是长尾、逐 token 的自回归解码。当它们挤在同一组 GPU、同一调度循环里时，编码阶段会周期性地“抢占”解码算力，拉高 TTFT、压低整体吞吐。</p>
+<h2 id="新功能：编码器分离"><a href="#新功能：编码器分离" class="headerlink" title="新功能：编码器分离"></a>新功能：编码器分离</h2><p>这一能力正是 gLLM 对论文 <strong>RServe</strong> <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2509.24381">《RServe: Overlapping Encoding and Prefill for Efficient LMM Inference》</a> 的工程落地：gLLM 已将 RServe 的编码器&#x2F;语言模型解耦与「编码-prefill 重叠」调度思想完整实现到引擎中。</p>
+<p>最新的 <strong>编码器分离（E 分离）</strong> 把视觉塔单独拆成 <strong>Encoder 进程</strong>，与 <strong>LM 进程</strong> 分别部署在不同 GPU 上，二者通过轻量控制面 + 高效数据面协同：</p>
+<ul>
+<li><strong>控制面</strong>：基于 ZMQ 的 <code>DiscoveryServer</code> 服务注册与发现，<code>DisaggCoordinator</code> 负责请求准入、派发与事件广播；</li>
+<li><strong>数据面</strong>：编码器算完的视觉 embedding 通过 <strong>NIXL</strong> 直接写入 LM 端的显存槽位，避免反复经 CPU 中转；</li>
+<li><strong>可靠性</strong>：内置看门狗（watchdog）对编码任务做超时重派；对不可恢复的失败与客户端中止，引入 <strong>abort 事件通道</strong> 让各 TP rank 的调度器与协调器一致地回收页表 &#x2F; SSM 槽位 &#x2F; NIXL 槽位，杜绝资源泄漏与“卡死”。</li>
+</ul>
+<p>这样，编码与解码各自独占算力、互不干扰，多模态服务在高并发下更稳、更快。</p>
+<h2 id="性能实测"><a href="#性能实测" class="headerlink" title="性能实测"></a>性能实测</h2><p>我们在 <strong>Qwen3.5-35B-A3B</strong>（MoE，混合 GDN + 全注意力，多模态）上做了一组对照实验：</p>
+<ul>
+<li><strong>工作负载</strong>：每请求随机 1-8 张 720p 图片，输出 128 token；</li>
+<li><strong>并发扫描</strong>：max-concurrency 从 1 扫到 32；</li>
+<li><strong>统一客户端</strong>：所有配置都用同一套 OpenAI 兼容压测客户端，保证公平；</li>
+<li><strong>对照配置（均为 2 卡预算）</strong>：<ul>
+<li>gLLM 单体 TP2 &#x2F; gLLM 编码器分离（LM TP1 + Encoder×1）</li>
+<li>sglang 单体 TP2 &#x2F; sglang 编码器分离（<code>zmq_to_scheduler</code>）</li>
+</ul>
+</li>
+</ul>
+<figure style="margin: 1.5rem 0; text-align: center;">
+  <img src="/img/compare_q35moe.png" alt="gLLM vs sglang：单体 TP2 与编码器分离对比" style="max-width: 100%; height: auto;" />
+  <figcaption>gLLM vs sglang：单体 TP2 与编码器分离对比</figcaption>
+</figure>
+
+<h3 id="关键结论"><a href="#关键结论" class="headerlink" title="关键结论"></a>关键结论</h3><ul>
+<li><strong>单体 vs 单体，gLLM 全程领先</strong>：在全部并发档位上，gLLM 单体的总 token 吞吐都稳定高于 sglang 单体，且优势随并发升高而扩大。高并发（c&#x3D;32）时 **gLLM 单体相较 sglang 单体高约 40%**；</li>
+<li><strong>分离进一步提升吞吐</strong>：把编码器拆出去后，两个引擎的吞吐都在高负载下更上一层楼：**gLLM 分离较自身单体 +8.5%<strong>，</strong>sglang 分离较自身单体 +28.9%**（编码器独占一卡的收益）；</li>
+<li><strong>分离 vs 分离，gLLM 高并发反超</strong>：在中低并发（c≈2-4）档位上，sglang 的编码器分离配置（LM TP1 + E1）反而短暂领先；但进入高并发后 gLLM 全面反超。c&#x3D;32 时 **gLLM 编码器分离的总吞吐较 sglang 编码器分离高约 17.8%**，并取得本次最高的总吞吐 <strong>~10,700 tok&#x2F;s</strong>；</li>
+<li><strong>端到端延迟更优</strong>：尽管分离引入了一次跨卡传输，gLLM 编码器分离凭借更高的吞吐更快清空解码队列，在 c&#x3D;32 的平均端到端延迟反而最低（约 11.8s），优于 sglang 的各项配置；</li>
+<li><strong>解码更稳（TPOT 更低）</strong>：在解码逐 token 延迟（平均 TPOT）上，编码器分离把视觉编码搬离 LM 卡，解码不再被编码计算周期性打断。c&#x3D;32 时 <strong>gLLM 编码器分离仅 76 ms&#x2F;token，约为 gLLM 单体（179）的一半</strong>，更远低于 sglang 单体（310）与 sglang 分离（181）。若进一步关闭「编码-prefill 重叠」，prefill 全部前置、解码阶段完全不受 prefill 干扰，TPOT 可低至 ~22 ms&#x2F;token 且几乎不随并发上升（代价依旧是 TTFT，见下方消融）；</li>
+<li><strong>关闭「编码-prefill 重叠」吞吐再小幅上探</strong>：图中蓝色点划线为 gLLM 分离关闭该重叠后的结果，总吞吐与端到端延迟反而<strong>略优于</strong>开启时（c&#x3D;32：10,850 vs 10,707 tok&#x2F;s、E2E 10.98s vs 11.81s）。原因在于：开启重叠时，针对<strong>单个含多图的请求</strong>，一收齐元信息就被准入、prefill 随该请求自身的 embedding 到达<strong>按图像逐块</strong>推进，于是同一请求的 prefill 被拆成多次较小的前向（更小的 GEMM、更多 kernel 启动、对不断增长的前缀重复做注意力），单位算力效率略低；关闭重叠则<strong>等所有视觉 embedding 到齐后一次性整段 prefill</strong>，计算最紧凑、吞吐与端到端延迟最优。但代价是首 token 要等编码全部完成，TTFT 明显变差（见下方消融）。换言之，这正是一组「<strong>首 token 延迟 ↔ 吞吐&#x2F;端到端延迟</strong>」的权衡。</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>配置（c&#x3D;32）</th>
+<th align="right">总吞吐 (tok&#x2F;s)</th>
+<th align="right">输出吞吐 (tok&#x2F;s)</th>
+<th align="right">平均端到端延迟 (ms)</th>
+<th align="right">平均 TPOT (ms&#x2F;token)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>gLLM 单体 TP2</td>
+<td align="right">9,868</td>
+<td align="right">154.8</td>
+<td align="right">13,496</td>
+<td align="right">179.4</td>
+</tr>
+<tr>
+<td><strong>gLLM 编码器分离</strong></td>
+<td align="right"><strong>10,707</strong></td>
+<td align="right"><strong>168.0</strong></td>
+<td align="right"><strong>11,806</strong></td>
+<td align="right"><strong>76.2</strong></td>
+</tr>
+<tr>
+<td>gLLM 编码器分离（重叠 off）</td>
+<td align="right">10,850</td>
+<td align="right">170.2</td>
+<td align="right">10,978</td>
+<td align="right">22.3</td>
+</tr>
+<tr>
+<td>sglang 单体 TP2</td>
+<td align="right">7,048</td>
+<td align="right">110.6</td>
+<td align="right">18,988</td>
+<td align="right">310.1</td>
+</tr>
+<tr>
+<td>sglang 编码器分离</td>
+<td align="right">9,087</td>
+<td align="right">142.6</td>
+<td align="right">14,618</td>
+<td align="right">180.5</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>说明：除特别标注的「重叠 off」一行外，所有配置均在统一的 2 卡预算、开启 overlap scheduling 的默认设置下测得，为严格同口径对比。</p>
+</blockquote>
+<h3 id="消融实验：编码-prefill-重叠"><a href="#消融实验：编码-prefill-重叠" class="headerlink" title="消融实验：编码-prefill 重叠"></a>消融实验：编码-prefill 重叠</h3><p>编码-prefill 重叠是 RServe 的核心机制，<strong>作用范围是单个请求内部</strong>：对于一条含<strong>多张图像</strong>的请求，无需等待该请求<strong>全部</strong>视觉 embedding 编码完成。请求一旦收齐各图像的元信息即可被准入，prefill 在「两层门控」下随这条请求自身的 embedding 陆续到达而逐项推进，从而把<strong>同一请求</strong>中后续图像的编码与已到达部分的 prefill 在时间上重叠起来。我们在 gLLM 编码器分离上对该机制做了开&#x2F;关消融（其余设置不变），其 <strong>平均 TTFT（首 token 延迟）</strong> 对比可直接对照上方主图左上角的 TTFT 子图（图例中的 <code>enc/prefill overlap</code> 即「编码-prefill 重叠」）：</p>
+<table>
+<thead>
+<tr>
+<th align="right">并发</th>
+<th align="right">重叠 ON：平均 TTFT</th>
+<th align="right">重叠 OFF：平均 TTFT</th>
+<th align="right">TTFT 改善</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="right">8</td>
+<td align="right">1,546 ms</td>
+<td align="right">2,130 ms</td>
+<td align="right"><strong>-27%</strong></td>
+</tr>
+<tr>
+<td align="right">16</td>
+<td align="right">2,828 ms</td>
+<td align="right">4,524 ms</td>
+<td align="right"><strong>-37%</strong></td>
+</tr>
+<tr>
+<td align="right">32</td>
+<td align="right">6,998 ms</td>
+<td align="right">9,679 ms</td>
+<td align="right"><strong>-28%</strong></td>
+</tr>
+</tbody></table>
+<p>从图中可以读出三点：</p>
+<ol>
+<li><strong>重叠是一项面向 TTFT 的优化，效果显著。</strong> 对比 gLLM 编码器分离的开（蓝色虚线）与关（蓝色点划线），开启重叠在中高并发把平均 TTFT 降低约 **27%-37%**；这与 RServe 的设计目标完全一致。代价仅是总吞吐略降 1%-6%（重叠把 prefill 按图像逐项分块，略逊于“等齐后一次性 prefill”的吞吐效率，见前文吞吐对比）。</li>
+<li><strong>TTFT 与吞吐&#x2F;端到端延迟是一组权衡。</strong> gLLM 编码器分离把算力压满以追求<strong>更高吞吐和更低端到端延迟</strong>（见主图），其首 token 延迟在极高并发处相应抬升；而 sglang 编码器分离（红色虚线）走的是另一条路线：首 token 延迟最为平缓，但吞吐与端到端延迟均不及 gLLM。两者各有侧重，可按业务对“首字快”还是“整体快&#x2F;省卡”的偏好选型。</li>
+<li><strong>重叠让分离方案的 TTFT 保持可控。</strong> 若关闭重叠，gLLM 分离的 TTFT 会随并发迅速恶化（c&#x3D;32 达 ~9.7s）；正是这一机制把它压回 ~7.0s 并换来吞吐与端到端延迟的领先。若业务更在意首 token 延迟，可通过 <code>GLLM_DISAGG_OVERLAP=1</code> 开启该重叠。</li>
+</ol>
+<h2 id="如何使用"><a href="#如何使用" class="headerlink" title="如何使用"></a>如何使用</h2><p>编码器分离涉及三个入口：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 1) 服务发现</span></span><br><span class="line">python -m gllm.entrypoints.discovery_server --listen <span class="variable">$DISC</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 2) 语言模型进程</span></span><br><span class="line">python -m gllm.entrypoints.lm_server --model-path <span class="variable">$MODEL</span> --lm-gpu 0 \</span><br><span class="line">    --port 8100 --discovery-endpoint <span class="variable">$DISC</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 3) 编码器进程</span></span><br><span class="line">python -m gllm.entrypoints.encoder_server --model-path <span class="variable">$MODEL</span> --encoder-gpu 1 \</span><br><span class="line">    --discovery-endpoint <span class="variable">$DISC</span></span><br></pre></td></tr></table></figure>
+
+<p>启动后即可像普通 OpenAI 兼容服务一样访问 LM 端口（<code>:8100</code>）。</p>
+<h2 id="附录：测试代码与复现步骤"><a href="#附录：测试代码与复现步骤" class="headerlink" title="附录：测试代码与复现步骤"></a>附录：测试代码与复现步骤</h2><blockquote>
+<p>以下命令中 <code>$MODEL</code> 为模型目录，<code>$DISC</code> 为服务发现地址（如 <code>127.0.0.1:9540</code>）；<code>python</code> 请使用对应引擎（gLLM &#x2F; sglang）所在环境的解释器。</p>
+</blockquote>
+<h3 id="1-四种配置的启动命令（均为-2-卡预算）"><a href="#1-四种配置的启动命令（均为-2-卡预算）" class="headerlink" title="1. 四种配置的启动命令（均为 2 卡预算）"></a>1. 四种配置的启动命令（均为 2 卡预算）</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># (A) gLLM 单体 TP2</span></span><br><span class="line">CUDA_VISIBLE_DEVICES=0,1 python -m gllm.entrypoints.api_server \</span><br><span class="line">    --model-path <span class="variable">$MODEL</span> --tp 2 --port 8100 --maxd 64</span><br><span class="line"></span><br><span class="line"><span class="comment"># (B) gLLM 编码器分离（LM TP1 + Encoder×1）</span></span><br><span class="line">python -m gllm.entrypoints.discovery_server --listen <span class="variable">$DISC</span></span><br><span class="line">python -m gllm.entrypoints.lm_server --model-path <span class="variable">$MODEL</span> --lm-gpu 0 \</span><br><span class="line">    --port 8100 --maxd 64 --discovery-endpoint <span class="variable">$DISC</span></span><br><span class="line">python -m gllm.entrypoints.encoder_server --model-path <span class="variable">$MODEL</span> \</span><br><span class="line">    --encoder-gpu 1 --discovery-endpoint <span class="variable">$DISC</span></span><br><span class="line"><span class="comment"># 关闭单请求「编码-prefill 重叠」（消融中的「重叠 off」为默认行为；开启重叠：GLLM_DISAGG_OVERLAP=1）</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># (C) sglang 单体 TP2</span></span><br><span class="line">CUDA_VISIBLE_DEVICES=0,1 python -m sglang.launch_server \</span><br><span class="line">    --model-path <span class="variable">$MODEL</span> --port 8500 --host 127.0.0.1 \</span><br><span class="line">    --tensor-parallel-size 2 --mem-fraction-static 0.9</span><br><span class="line"></span><br><span class="line"><span class="comment"># (D) sglang 编码器分离（zmq_to_scheduler）</span></span><br><span class="line">CUDA_VISIBLE_DEVICES=1 python -m sglang.launch_server \</span><br><span class="line">    --model-path <span class="variable">$MODEL</span> --encoder-only --port 8600 --host 127.0.0.1 \</span><br><span class="line">    --mem-fraction-static 0.85</span><br><span class="line">CUDA_VISIBLE_DEVICES=0 python -m sglang.launch_server \</span><br><span class="line">    --model-path <span class="variable">$MODEL</span> --language-only --port 8500 --host 127.0.0.1 \</span><br><span class="line">    --tensor-parallel-size 1 --mem-fraction-static 0.9 \</span><br><span class="line">    --encoder-urls http://127.0.0.1:8600 \</span><br><span class="line">    --encoder-transfer-backend zmq_to_scheduler</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-并发压测命令"><a href="#2-并发压测命令" class="headerlink" title="2. 并发压测命令"></a>2. 并发压测命令</h3><p>所有配置都通过同一套 <code>sglang.bench_serving</code>（OpenAI 兼容客户端）驱动，工作负载（数据集 &#x2F; seed &#x2F; 长度）完全一致，只在 <code>--max-concurrency</code> 上沿 <code>1,2,4,8,16,32</code> 扫描，确保公平。单次压测的关键命令如下（<code>$C</code> 为并发档位，<code>$N</code> 为该档位的请求数）：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">python -m sglang.bench_serving \</span><br><span class="line">    --backend sglang-oai-chat \</span><br><span class="line">    --base-url http://127.0.0.1:8100 \</span><br><span class="line">    --model <span class="variable">$MODEL</span> --tokenizer <span class="variable">$MODEL</span> \</span><br><span class="line">    --dataset-name image --image-count 8 --random-image-count \</span><br><span class="line">    --image-resolution 720p \</span><br><span class="line">    --random-input-len 32 --random-output-len 128 \</span><br><span class="line">    --num-prompts <span class="variable">$N</span> --max-concurrency <span class="variable">$C</span> \</span><br><span class="line">    --request-rate inf --seed 42 --disable-tqdm</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>gLLM 配置用 <code>:8100</code>，sglang 配置用 <code>:8500</code>。请求数随并发线性放大并做上下限钳制：<code>$N = clamp(6 × $C, 24, 128)</code>（高并发统计更稳、低并发墙钟时间可控）；<code>--request-rate inf</code> 表示不限速，因此并发是唯一的负载旋钮。每次运行取结果 JSONL 的最后一行（含 bench_serving 的完整指标）汇总绘图。</p>
+</blockquote>
+<h3 id="3-单请求「编码-prefill-重叠」（gLLM-方法）"><a href="#3-单请求「编码-prefill-重叠」（gLLM-方法）" class="headerlink" title="3. 单请求「编码-prefill 重叠」（gLLM 方法）"></a>3. 单请求「编码-prefill 重叠」（gLLM 方法）</h3><p>本文消融实验对比了该机制的开&#x2F;关。这是 <strong>gLLM 特有的开关</strong>：由 LM 进程的环境变量 <code>GLLM_DISAGG_OVERLAP</code> 控制，<strong>默认 <code>0</code>（关闭）</strong>。LM 会等单个请求的<strong>全部</strong>视觉 embedding 到齐后再一次性整段 prefill（即消融中的「重叠 off」配置）。设为 <code>1</code> 可开启重叠：请求收齐元信息后即可准入，prefill 随该请求自身的 embedding 陆续到达而逐项推进。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 默认即为关闭；若需开启单请求重叠，在 lm_server 前加 GLLM_DISAGG_OVERLAP=1</span></span><br><span class="line">GLLM_DISAGG_OVERLAP=1 python -m gllm.entrypoints.lm_server \</span><br><span class="line">    --model-path <span class="variable">$MODEL</span> --lm-gpu 0 --port 8100 --discovery-endpoint <span class="variable">$DISC</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>注意：该开关只影响<strong>单个请求内部</strong>的编码&#x2F;prefill 重叠；跨请求的流水线（LM 处理请求 A 的同时编码器处理请求 B）是两平面设计固有的，不受此开关影响。</p>
+</blockquote>
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>编码器分离让 gLLM 在多模态服务中把“编码”与“解码”两类异构负载解耦，在相同硬件预算下取得了更高吞吐与更稳延迟。欢迎到 <a target="_blank" rel="noopener" href="https://github.com/gty111/gLLM">github.com&#x2F;gty111&#x2F;gLLM</a> 体验最新功能。</p>
+<hr>
+<p><em>测试环境：8×140GB GPU 节点；模型 Qwen3.5-35B-A3B（bf16）；压测工具为统一的 OpenAI 兼容客户端。</em></p>
+<p><em>版本信息：SGLang v0.5.9；gLLM commit <code>75ff6cd</code>。</em></p>
+</div><div class="article-licensing box"><div class="licensing-title"><p>gLLM 推出编码器分离（Encoder-Disaggregation）：多模态推理吞吐再上台阶</p><p><a href="https://gty111.github.io/2026/06/13/gllm-encoder-disaggregation/">https://gty111.github.io/2026/06/13/gllm-encoder-disaggregation/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>Author</h6><p>Tianyu Guo</p></div></div><div class="level-item is-narrow"><div><h6>Posted on</h6><p>2026-06-13</p></div></div><div class="level-item is-narrow"><div><h6>Updated on</h6><p>2026-06-13</p></div></div><div class="level-item is-narrow"><div><h6>Licensed under</h6><p><a class="icons" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="icon fab fa-creative-commons"></i></a><a class="icons" rel="noopener" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="icon fab fa-creative-commons-by"></i></a><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/gLLM/">gLLM</a><a class="link-muted mr-2" rel="tag" href="/tags/LLM-Serving/">LLM Serving</a><a class="link-muted mr-2" rel="tag" href="/tags/VLM/">VLM</a><a class="link-muted mr-2" rel="tag" href="/tags/Inference/">Inference</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2026/06/13/thoughts-on-living-with-ai/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">AI 时代的个体思考</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2024/04/22/thought-LLMs/"><span class="level-item">Some thoughts on LLMs</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><div class="card"><div class="card-content"><h3 class="title is-5">Comments</h3><div id="disqus_thread"><noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript></div><script>var disqus_config = function () {
+            this.page.url = 'https://gty111.github.io/2026/06/13/gllm-encoder-disaggregation/';
+            this.page.identifier = '2026/06/13/gllm-encoder-disaggregation/';
+        };
+        (function() {
+            var d = document, s = d.createElement('script');  
+            s.src = '//' + 'gty111' + '.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();</script></div></div></div><div class="column column-left is-3-tablet is-3-desktop is-3-widescreen  order-1"><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">Recents</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2026-06-13T23:42:00.000Z">2026-06-13</time></p><p class="title"><a href="/2026/06/13/thoughts-on-living-with-ai/">AI 时代的个体思考</a></p><p class="categories"><a href="/categories/essay/">essay</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2026-06-13T23:36:00.000Z">2026-06-13</time></p><p class="title"><a href="/2026/06/13/gllm-encoder-disaggregation/">gLLM 推出编码器分离（Encoder-Disaggregation）：多模态推理吞吐再上台阶</a></p><p class="categories"><a href="/categories/Technology/">Technology</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2024-04-22T11:47:36.000Z">2024-04-22</time></p><p class="title"><a href="/2024/04/22/thought-LLMs/">Some thoughts on LLMs</a></p><p class="categories"><a href="/categories/Technology/">Technology</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-12-14T03:28:23.000Z">2023-12-14</time></p><p class="title"><a href="/2023/12/14/ebooks/">ebooks and tutorials</a></p><p class="categories"><a href="/categories/Technology/">Technology</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-12-04T11:05:56.000Z">2023-12-04</time></p><p class="title"><a href="/2023/12/04/Tips/">Miscellaneous tips</a></p><p class="categories"><a href="/categories/Technology/">Technology</a></p></div></article></div></div><div class="card widget" id="toc" data-type="toc"><div class="card-content"><div class="menu"><h3 class="menu-label">Catalogue</h3><ul class="menu-list"><li><a class="level is-mobile" href="#背景"><span class="level-left"><span class="level-item">1</span><span class="level-item">背景</span></span></a></li><li><a class="level is-mobile" href="#新功能：编码器分离"><span class="level-left"><span class="level-item">2</span><span class="level-item">新功能：编码器分离</span></span></a></li><li><a class="level is-mobile" href="#性能实测"><span class="level-left"><span class="level-item">3</span><span class="level-item">性能实测</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#关键结论"><span class="level-left"><span class="level-item">3.1</span><span class="level-item">关键结论</span></span></a></li><li><a class="level is-mobile" href="#消融实验：编码-prefill-重叠"><span class="level-left"><span class="level-item">3.2</span><span class="level-item">消融实验：编码-prefill 重叠</span></span></a></li></ul></li><li><a class="level is-mobile" href="#如何使用"><span class="level-left"><span class="level-item">4</span><span class="level-item">如何使用</span></span></a></li><li><a class="level is-mobile" href="#附录：测试代码与复现步骤"><span class="level-left"><span class="level-item">5</span><span class="level-item">附录：测试代码与复现步骤</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#1-四种配置的启动命令（均为-2-卡预算）"><span class="level-left"><span class="level-item">5.1</span><span class="level-item">1. 四种配置的启动命令（均为 2 卡预算）</span></span></a></li><li><a class="level is-mobile" href="#2-并发压测命令"><span class="level-left"><span class="level-item">5.2</span><span class="level-item">2. 并发压测命令</span></span></a></li><li><a class="level is-mobile" href="#3-单请求「编码-prefill-重叠」（gLLM-方法）"><span class="level-left"><span class="level-item">5.3</span><span class="level-item">3. 单请求「编码-prefill 重叠」（gLLM 方法）</span></span></a></li></ul></li><li><a class="level is-mobile" href="#结语"><span class="level-left"><span class="level-item">6</span><span class="level-item">结语</span></span></a></li></ul></div></div><style>#toc .menu-list > li > a.is-active + .menu-list { display: block; }#toc .menu-list > li > a + .menu-list { display: none; }</style><script src="/js/toc.js" defer></script></div><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">Categories</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/Technology/"><span class="level-start"><span class="level-item">Technology</span></span><span class="level-end"><span class="level-item tag">14</span></span></a></li><li><a class="level is-mobile" href="/categories/essay/"><span class="level-start"><span class="level-item">essay</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/log/"><span class="level-start"><span class="level-item">log</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">Tags</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/AI/"><span class="tag">AI</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/GEMM/"><span class="tag">GEMM</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/GPU/"><span class="tag">GPU</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Hexo/"><span class="tag">Hexo</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/IR/"><span class="tag">IR</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Icarus/"><span class="tag">Icarus</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Inference/"><span class="tag">Inference</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/LLM/"><span class="tag">LLM</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/LLM-Serving/"><span class="tag">LLM Serving</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/NVIDIA/"><span class="tag">NVIDIA</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/VLM/"><span class="tag">VLM</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/cutlass/"><span class="tag">cutlass</span><span class="tag">7</span></a></div><div class="control"><a class="tags has-addons" href="/tags/ebook/"><span class="tag">ebook</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/gLLM/"><span class="tag">gLLM</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/github/"><span class="tag">github</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/tips/"><span class="tag">tips</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/tutorial/"><span class="tag">tutorial</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E4%B8%80%E7%94%9F%E4%B8%80%E8%8A%AF/"><span class="tag">一生一芯</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%86%B0%E9%9B%B9/"><span class="tag">冰雹</span><span class="tag">1</span></a></div></div></div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/logo.jpg" alt="Tianyu Guo&#039;s homepage" height="28"></a><p class="is-size-7"><span>&copy; 2026 Tianyu Guo</span></p></div><div class="level-end"></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("en");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="Back to top" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "This website uses cookies to improve your experience.",
+          dismiss: "Got it!",
+          allow: "Allow cookies",
+          deny: "Decline",
+          link: "Learn more",
+          policy: "Cookie Policy",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css"><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/auto-render.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/mhchem.min.js" defer></script><script>window.addEventListener("load", function() {
+            document.querySelectorAll('[role="article"] > .content').forEach(function(element) {
+                renderMathInElement(element);
+            });
+        });</script><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="Type something..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"Type something...","untitled":"(Untitled)","posts":"Posts","pages":"Pages","categories":"Categories","tags":"Tags"});
+        });</script></body></html>
