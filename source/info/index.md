@@ -1,5 +1,6 @@
 ---
 title: Tianyu Guo 郭天宇
+updated: 2026-11-16 00:00:00
 ---
 
 
@@ -10,7 +11,11 @@ E-mail : guoty9[at]mail2.sysu.edu.cn
 
 ## About
 
-I'm a fourth-year Ph.D. student of Computer Science and Technology at [Sun Yat-Sen University](https://www.sysu.edu.cn/) co-advised by Assoc. Prof. [Xianwei Zhang](https://xianweiz.github.io/) and Prof. [Nong Xiao](https://cse.sysu.edu.cn/teacher/XiaoNong) . I completed bachelor degree at [Xidian University](https://www.xidian.edu.cn/). My reasearch insterest lies in GPU architecture,MLSys and AI Infra. I'm also passionate about the open source community [(Check out my projects/PRs)](https://github.com/gty111). You can also have a look at my **[RESUME](doc/resume.pdf)** for more details.
+I'm a Ph.D. student in Computer Science and Technology at [Sun Yat-Sen University](https://www.sysu.edu.cn/), co-advised by Assoc. Prof. [Xianwei Zhang](https://xianweiz.github.io/) and Prof. [Nong Xiao](https://cse.sysu.edu.cn/teacher/XiaoNong). I received my bachelor's degree from [Xidian University](https://www.xidian.edu.cn/). My research interests include GPU architecture, MLSys, and AI infrastructure.
+
+I'm currently an intern at [Inferact](https://inferact.ai/), leading EPD (Encoder-Prefill-Decode) disaggregation in the vLLM community. I'm also the initial contributor to SGLang EPD and the creator of [gLLM](https://github.com/gty111/gLLM). [\[vLLM EPD Tracker\]](https://github.com/vllm-project/vllm/issues/52409) [\[vLLM Blog\]](https://vllm.ai/blog/2026-11-11-encoder-disaggregation-epd) [\[SGLang EPD\]](https://github.com/sgl-project/sglang/pull/12263)
+
+You can find my [projects and contributions on GitHub](https://github.com/gty111) and download my **[RESUME](doc/resume.pdf)** for more details.
 
 
 ## Publications
@@ -43,9 +48,17 @@ Mengyue Xi, **Tianyu Guo**, Xuanteng Huang, Zejia Lin, Xianwei Zhang, The 30th A
 
 ## Experience
 
-<img src="../img/Tencent_logo.jpg" width=150> <div style="float: right;">2026.03 - Present</div>
+<a href="https://inferact.ai/"><img src="../img/inferact-logo.svg" alt="Inferact" width="150"></a> <div style="float: right;">2026.08 - Present</div>
 
-- Intern at [Tencent Hunyuan](https://hunyuan.tencent.com/)
+- Intern — vLLM EPD Lead
+    - Lead community development and cross-team integration of Encoder-Prefill-Decode disaggregation in vLLM.
+    - Metadata-only multimodal requests, encoder-only execution, and EPD routing integration.
+    - Improve Mooncake/NIXL embedding transfer correctness and request-level failure isolation.
+    - [\[EPD Tracker\]](https://github.com/vllm-project/vllm/issues/52409) [\[vLLM Blog\]](https://vllm.ai/blog/2026-11-11-encoder-disaggregation-epd)
+
+<img src="../img/Tencent_logo.jpg" width=150> <div style="float: right;">2026.03 - 2026.08</div>
+
+- Intern (Project Up) at [Tencent Hunyuan](https://hunyuan.tencent.com/)
     - vllm-router integration for RL
     - Scheduling policy optimization for large-scale code agent production
     - PD disaggregation integration and support for RL
@@ -58,12 +71,12 @@ Mengyue Xi, **Tianyu Guo**, Xuanteng Huang, Zejia Lin, Xianwei Zhang, The 30th A
 
 <img src="../img/xiaohongshu.png" width=50> <div style="float: right;">2025.08 - 2025.12</div>
 
-- RedStar intern at [RedNote hilab](https://www.xiaohongshu.com/) 
+- Research Intern (ReDstar) at [RedNote hilab](https://www.xiaohongshu.com/)
     - [\[RServe\]](https://arxiv.org/abs/2509.24381) Large multimodal model inference and EPD disaggregation 
 
 <img src="../img/Tencent_logo.jpg" width=150> <div style="float: right;">2024.01 - 2024.06</div>
 
-- Research intern at [Tencent Code Buddy team](https://www.tencent.com/)
+- Research Intern at [Tencent Code Buddy team](https://www.tencent.com/)
     - [\[CrossKV\]](doc/CrossKV-pre.pdf)[\[KVsail\]](doc/KVsail.pdf) [\[EFIM\]](https://arxiv.org/abs/2505.21889) KV cache reuse and offloading
     - LLMs inference systems with extreme performance
 
